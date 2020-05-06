@@ -1,0 +1,16 @@
+4
+Editor.Module.DB.DBColumnTextOneNumber|ID|180|9999|0|0
+Editor.Module.DB.DBColumnText|名前|180|False|
+Editor.Module.DB.DBColumnText|ファイル名|180|False|
+Editor.Module.DB.DBColumnButtonSelectFile|2||
+DBColumnTextOneNumber	DBColumnText	DBColumnText	DBColumnButtonSelectFile
+ID	名前	ファイル名	
+0	$ワイプ用の合成画像	Materials\Transition\blind.png	
+1	$タイトル画面のグラフィック	Materials\title.png	
+2	$タイトル画面のBGM	Materials\BGM\FC【オープニング】op01.mp3	
+3	$バトルテスト用の背景グラフィック	Materials\BattleSystem\BattleBack\フィールド.png	
+4	$通常戦闘のBGM	Materials\BGM\RT【通常戦闘】fang.mp3	
+5	$戦闘開始時のワイプ画像	Materials\Transition\battle.png	
+6	$戦闘勝利時のワイプ画像	Materials\Transition\fade.png	
+7	$ゲームオーバー画面のBGM	Materials\BGM\HM【ゲームオーバー】暗躍.mp3	
+

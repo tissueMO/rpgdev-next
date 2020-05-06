@@ -1,0 +1,15 @@
+﻿//鍵の所持確認
+if(Game.DB.VDBParty.CheckItemInParty($1)) {
+	//効果音とともにページを変更する
+	Game.DB.FDBMaterial.Play($2, 255, 0, 0);
+	Game.SceneMap.MapData.ThisEVData.SelfValues.Set($3, TRUE);
+
+	//財宝入手処理
+	//ITEM: Game.DB.VDBParty.AddItem($4A, 1);
+	//MONEY: Game.DB.VDBParty.Money += $4B;
+
+	Game.SceneMap.ShowMessage(-1, "", $5);
+} else {
+	//鍵を持っていない場合
+	Game.SceneMap.ShowMessage(-1, "", "鍵がかかっていて開かない。");
+}

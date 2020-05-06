@@ -1,0 +1,50 @@
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnPictureFile	DBColumnBool
+FixedID	ID	名前	グラフィック	反対側
+1331495111	1	レオナルド	Materials\FaceChar\フェイス1.png	0
+1932340604	2	ダークレオナルド	Materials\FaceChar\フェイス2.png	1
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnPictureFile
+FixedID	ID	名前	グラフィック
+1498305821	9001	$システムグラフィック	Materials\system.png
+1009716120	9002	$メーターグラフィック	Materials\meter.jpg
+783786820	9003	$ゲームオーバー背景	Materials\BattleSystem\gameover.jpg
+1676071559	9004	$エモーションアイコン	Materials\pipo-emotion.png
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnText	DBColumnButtonSelectFile	DBColumnButtonPlaySound
+FixedID	ID	名前	ファイル名		再生/停止
+922869806	1	ドア開閉	Materials\SE\TM【ドア開く】_door3.wav		
+1090737392	2	ドア開かない	Materials\SE\TM【ドア開かない】_door06.wav		
+157393857	3	宝箱開閉	Materials\SE\TM【宝箱】_kachi18_r.wav		
+1454033509	10	あたり	Materials\SE\OJ【当たり】ta_ge_quiz_fanfa01.mp3		
+890452935	11	はずれ	Materials\SE\OJ【はずれ】ta_ge_quiz_no01.mp3		
+1324699668	12	ワンポイントアドバイス	Materials\SE\MD【アドバイス】魔王魂-チャイム10.wav		
+128722396	13	落ちる	Materials\SE\TM【落ちる】fall05.wav		
+1155891626	14	ボタン	Materials\SE\TM【ボタン】kachi42.wav		
+1630541587	101	$決定音	Materials\SE\KK【決定音】_button25.ogg		
+2042774804	102	$キャンセル音	Materials\SE\TM【キャンセル】_cursor30.ogg		
+691730085	103	$エラー音	Materials\SE\TAM【エラー】_error1.wav		
+1774475045	150	$宿屋	Materials\SE\TAM【宿屋】_soft-m01.ogg		
+1600022086	201	$戦闘終了	Materials\SE\SC【戦闘終了】_Jingle#17.mp3		
+1110965397	202	$Victory経験値	Materials\SE\TM【経験値】_chari08.wav		
+441391661	203	$Victoryお金	Materials\SE\TM【お金】_coin03.wav		
+1996923117	204	$レベルアップ	Materials\SE\HM【レベルアップ】_壮大なひらめき.mp3		
+1282275005	251	$ダメージ音	Materials\SE\TM【ダメージ】hit35.wav		
+2082463200	261	$逃げる	Materials\SE\MD【逃げる】魔王魂-Se-逃げる.wav		
+1373537909	1001	素手攻撃	Materials\SE\OJ_sen_ge_panchi01.mp3		
+1667807536	1002	剣攻撃	Materials\SE\TM_tm2_slash000.wav		
+659687870	1101	回復音	Materials\SE\TM【回復】power19.wav		
+1174205465	1111	魔法陣	Materials\SE\KK_teleport01.mp3		
+2062820346	1151	炎	Materials\SE\TM【fire_1】.wav		
+13167213	1401	ブレス攻撃	Materials\SE\TM_fire02 編集後.wav		
+1703968382	1501	レーザー	Materials\SE\TM_tm2_laser000.wav		
+2017895310	1502	ワープ	Materials\SE\MD_マジカル27.wav		
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnText	DBColumnText	DBColumnButtonSelectFile	DBColumnTextOneNumber	DBColumnTextOneNumber	DBColumnTextOneNumber	DBColumnTextOneNumber	DBColumnListUser	DBColumnTextNumbers	DBColumnButtonInputColor
+FixedID	ID	名前	フォント正式名称	フォントファイル名		大きさ	太さ	行間	文字間	描画方法	縁色	
+460260511	0	$標準フォント	UmePlus Gothic	Fonts\umeplus-gothic.ttf		18	5	25	0	3	0;0;0	
+716992600	1	$メッセージフォント	UmePlus Gothic	Fonts\umeplus-gothic.ttf		16	5	25	0	2	255;255;255	
+2137846963	2	$テロップフォント	UmePlus Gothic	Fonts\umeplus-gothic.ttf		18	5	30	0	2	255;255;255	
+1842705685	3	$ウィンドウ内テキスト	UmePlus Gothic	Fonts\umeplus-gothic.ttf		14	3	20	0	2	255;255;255	
+773449379	10	$セーブデータリスト用	UmePlus Gothic	Fonts\umeplus-gothic.ttf		12	3	14	0	2	255;255;255	
+205166528	11	$ダメージ数値表示用	UmePlus Gothic	Fonts\umeplus-gothic.ttf		22	7	0	0	3	255;255;255	
+

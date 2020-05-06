@@ -1,0 +1,6 @@
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnText	DBColumnTextOneNumber
+FixedID	ID	名前	メモ	列数
+1057641178	101	既定素材リスト	メモリ上に読み込まれない汎用素材です。	4
+746600861	102	場所リスト	スキルやアイテムで場所を選択するときの候補です。	6
+1237236378	103	ボイスリスト	ボイス付のメッセージを表示するときに再生されます。	5
+

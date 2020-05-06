@@ -1,0 +1,900 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RPG Developer NEXT 取扱説明書</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auto-document.js"></script>
+<script src="js/version-getter.js"></script>
+</head>
+
+<body class="node_sq-syntax">
+<!-- タイトルバー -->
+<div id="header">
+  <a href="index.html"><h1><span>RPG Developer NEXT</span> <script>PrintVersion();</script> 取扱説明書</h1></a>
+</div>
+
+<div id="container">
+<!-- 目次サイドバー -->
+<div id="menuContainer">
+  <div id="menuContent">
+    <script src="js/manual-tree.js"></script>
+    <script src="js/auto-tree.js"></script>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="mainContainer">
+  <!-- ぱんくずリスト [&gt]=[>] -->
+  <div id="breadcrumb"><a href="index.html">HOME</a> &gt; <a href="sq.html">スクリプト言語「Squirrel」</a> &gt; 基本文法</div>
+
+  <!-- 親ノード見出し -->
+  <h2>基本文法</h2>
+  <div class="text">
+    <!-- 親ノードのテキスト -->
+    <p>
+      Squirrelの基本的な文法について概説しています。<br>
+      ある程度のプログラミング知識があることを前提にしている部分もありますので、ご不明な点がある場合は他のプログラミング講座サイト等をご利用になることをお勧めします。
+    </p>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="1">字句構造</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      一部の制御文を除き、文末にはセミコロン ; を付けて改行します。<br>
+      ただし、このセミコロン ; は省略してもよいことになっていますのでお好みに合わせて統一することをお勧めします。<br>
+    </p>
+    <p>
+      中括弧 { ... } で括られる領域をブロックと呼びます。<br>
+      制御文や関数、クラスにはブロックが作られます。<br>
+    </p>
+    <p>
+      コードとして認識されない部分のことをコメントといいます。<br>
+      // から始まる行コメントと、/* ... */ で括られる範囲コメントの2種類があります。<br>
+      コメントの中には日本語を含めることができ、コードに対する補足や注釈を加える目的で使われます。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// これが行コメントです。</strong>
+<strong class="keyword">print</strong>("Hello World.");    <strong class="comment">// 行コメントは行の途中から始めることもできます。</strong>
+
+<strong class="comment">/*
+  範囲コメントは複数行に渡って記述することができます。
+*/</strong>
+    </code></pre>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="2">変数・定数・プロパティ</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <h4>変数</h4>
+    <p>
+      ある値を格納する入れ物のことを変数といいます。<br>
+      「変数 a を作ります」と明示することを定義といい、定義されていない変数を使うことはできません。<br>
+      変数は、有効範囲の違いから大きく2種類に分けられます。<br>
+    </p>
+    <ul class="circle">
+      <li>グローバル変数 … 一度定義されるとプログラムが終了するまで残り続けます。スクリプト中のどこからでも参照できます。</li>
+      <li>ローカル変数 … { ... } 内の中でのみ有効で、外側に出ると破棄されます。</li>
+    </ul>
+    <p style="margin-top: 1rem;">
+      変数の名前は自由に付けられますが、先頭1文字目は英字かアンダースコアのみ、それ以降は英数字とアンダースコアにする必要があります。<br>
+      なお、アルファベットは大文字と小文字を区別します。<br>
+    </p>
+    <p>
+      グローバル変数を <- で初期化する点にご注意下さい。<br>
+      これは、タイプミスによる新たに別の変数を定義してしまう問題の解決策であるとされています。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// グローバル変数 g_Value を定義し、値を 1 で初期化します。</strong>
+g_Value <- 1;
+
+<strong class="comment">// ローカル変数 msg を定義し、値を "セリフ" で初期化します。</strong>
+<strong class="keyword">local</strong> msg = "セリフ";
+
+<strong class="comment">// ローカル変数 temp を定義します。このように明示的に初期化しなかった場合は null が代入されます。</strong>
+<strong class="keyword">local</strong> temp;
+    </code></pre>
+
+    <h4>定数</h4>
+    <p>
+      ある決まった値に名前を付けたものを定数といいます。<br>
+      値に名前を付けることで、コード全体の可読性や保守性を高めることができます。<br>
+      値に対して名前を付けるため、中身の値を後から変更することはできません。<br>
+    </p>
+    <p>
+      定数はコンパイル時に値として置き換えられるため、実行中に定義しようとするとエラーになります。<br>
+      有効範囲はグローバル変数と同様で、スクリプト中のどこからでも参照できます。<br>
+    </p>
+    <p>
+      なお、定数として設定できる値は整数型、小数型、文字列型（型については後述）に限られます。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// HPの最大値を定数とします。</strong>
+<strong class="keyword">const</strong> MAXHP = 9999;
+
+<strong class="keyword">if</strong>(MAXHP < hp<strong class="comment">/*変数*/</strong>) {
+  hp = MAXHP;
+}
+    </code></pre>
+
+    <h4>列挙体</h4>
+    <p>
+      列挙体とは、ある共通の意味を持った定数のグループです。<br>
+      特に指定がない限り 0 から始まる整数の連番となります。<br>
+      グループのことを列挙体、グループ内の各定数のことを列挙体メンバーと呼びます。<br>
+      列挙体メンバーで代入できる型は定数と同様です。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 方角を示す列挙体を定義します。</strong>
+<strong class="keyword">enum</strong> Direction4 {
+  East,    <strong class="comment">// 東 = 0</strong>
+  South,   <strong class="comment">// 南 = 1</strong>
+  West,    <strong class="comment">// 西 = 2</strong>
+  North,   <strong class="comment">// 北 = 3</strong>
+  <strong class="comment">// 最後のメンバーの末尾に , を入れても問題ありません。</strong>
+};
+    </code></pre>
+
+    <h4>プロパティ</h4>
+    <p>
+      プロパティとは、変数に似ています。使い方も変数と全く同様です。<br>
+      組み込みオブジェクトでは、クラスのインスタンスがプロパティとして公開されています。<br>
+      変数では値の出し入れが自由に行えますが、プロパティでは代入による置き換えを禁止したり（読み取り専用）、代入を許可する場合であっても有効範囲を限定もしくは調整することができるようになっています。<br>
+      なお、プロパティはゲームプログラム側が公開するものに限って利用でき、スクリプト側でプロパティを作ることはできません。<br>
+    </p>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="3">基本データ型</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      Squirrelでは、変数にはどんな値でも格納できます。<br>
+      しかし、値そのものには型という概念がありますので、これらについては理解しておく必要があります。<br>
+    </p>
+
+    <h4>整数型 (integer)</h4>
+    <p>
+      その名の通り整数だけを扱える値です。10進数と16進数の表記に対応しています。<br>
+      また、シングルクォートで括られた一文字も整数（文字コードに対応）として扱われます。<br>
+    </p>
+
+    <pre><code>
+x <- 65535;   <strong class="comment">// 10進数表記: 65535</strong>
+y <- 0xff;    <strong class="comment">// 16進数表記: 255</strong>
+z <- 'a';     <strong class="comment">// 文字表記: 97 (aの文字コード)</strong>
+    </code></pre>
+
+    <h4>小数型 (float)</h4>
+    <p>
+      小数点以下の数値を扱える型です。一般的な表記方法と e を用いた指数表記に対応しています。<br>
+      整数に変換するときは、小数点以下が切り捨てられます。<br>
+    </p>
+
+    <pre><code>
+x <- 3.14;    <strong class="comment">// 一般表記: 3.14</strong>
+y <- 314e-2;  <strong class="comment">// 指数表記: 3.14</strong>
+    </code></pre>
+
+    <h4>論理型 (boolean)</h4>
+    <p>
+      true(真) と false(偽) のどちらかの値を取る型です。<br>
+      後述の比較演算子による計算結果は論理値となります。<br>
+      また、trueは整数の 1、falseは整数の 0 と等価です。<br>
+    </p>
+
+    <pre><code>
+x <- true;    <strong class="comment">// 真: 本ソフトでは「ON」を意味することがあります。</strong>
+y <- false;   <strong class="comment">// 偽: 本ソフトでは「OFF」を意味することがあります。</strong>
+    </code></pre>
+
+    <h4>文字列型 (string)</h4>
+    <p>
+      ダブルクォートで括られる一連の文字列です。<br>
+      ダブルクォートを文字列の一部としたい場合、エスケープシーケンスという特殊文字を使います。<br>
+      例えば、[\"] はダブルクォートそのもの、[\n] は改行、[\t] はタブ文字を意味します。<br>
+      エスケープシーケンスを使わない表記方法として、@"..." とすることで直感的に入力することができます。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// エスケープシーケンスを使って3行の文字列を表記します。</strong>
+x <- "1行目\n2行目\n3行目";
+
+<strong class="comment">// x と y の中身は等価です。</strong>
+y <- @"1行目
+2行目
+3行目";
+    </code></pre>
+
+    <h4>null</h4>
+    <p>
+      空もしくは無効であることを意味するキーワードです。<br>
+    </p>
+
+    <h4>デフォルト委譲メソッド</h4>
+    <p>
+      すべての値には、デフォルト委譲メソッドという汎用的なメソッドを持っています。<br>
+      (値).メソッド名() で呼び出すことができます。<br>
+    </p>
+    <ul class="disc">
+      <li>
+        共通
+        <table>
+          <tr>
+            <td width="200">.tointeger()</td>
+            <td>値を整数に変換する</td>
+          </tr>
+          <tr>
+            <td>.tofloat()</td>
+            <td>値を小数に変換する</td>
+          </tr>
+          <tr>
+            <td>.tostring()</td>
+            <td>値を文字列に変換する</td>
+          </tr>
+          <tr>
+            <td>.tochar()</td>
+            <td>値を文字（文字コードに対応する数値）に変換する</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        文字列型のみ
+        <table>
+          <tr>
+            <td width="200">.len()</td>
+            <td>文字列の長さを返す</td>
+          </tr>
+          <tr>
+            <td>.tolower()</td>
+            <td>小文字にした文字列を返す</td>
+          </tr>
+          <tr>
+            <td>.toupper()</td>
+            <td>大文字にした文字列を返す</td>
+          </tr>
+          <tr>
+            <td>.slice(START, [END])</td>
+            <td>START 以上 END 未満の範囲の文字列を返す</td>
+          </tr>
+          <tr>
+            <td>.find(STR, [START])</td>
+            <td>START の位置から文字列 STR を検索し、最初に見つかった位置のインデックス（0 起点）を返し、見つからなかった場合は null を返す</td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="4">演算子</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      基本的には同じ型同士で演算します。<br>
+      小数と整数が混じった計算では、小数となります。<br>
+      文字列と数値が混じった計算では、文字列となります。<br>
+    </p>
+
+    <table>
+      <tr class="head">
+        <th width="80">演算子</th>
+        <td width="300">概要</td>
+        <td>表記</td>
+      </tr>
+
+      <tr>
+        <th>+</th>
+        <td>加算</td>
+        <td>x = y + z</td>
+      </tr>
+
+      <tr>
+        <th>-</th>
+        <td>減算</td>
+        <td>x = y - z</td>
+      </tr>
+
+      <tr>
+        <th>*</th>
+        <td>乗算</td>
+        <td>x = y * z</td>
+      </tr>
+
+      <tr>
+        <th>/</th>
+        <td>除算</td>
+        <td>x = y / z</td>
+      </tr>
+
+      <tr>
+        <th>%</th>
+        <td>剰余</td>
+        <td>x = y % z</td>
+      </tr>
+
+      <tr>
+        <th>+=</th>
+        <td>自己代入・加算</td>
+        <td>x += y</td>
+      </tr>
+
+      <tr>
+        <th>-=</th>
+        <td>自己代入・減算</td>
+        <td>x -= y</td>
+      </tr>
+
+      <tr>
+        <th>*=</th>
+        <td>自己代入・乗算</td>
+        <td>x *= y</td>
+      </tr>
+
+      <tr>
+        <th>/=</th>
+        <td>自己代入・除算</td>
+        <td>x /= y</td>
+      </tr>
+
+      <tr>
+        <th>%=</th>
+        <td>自己代入・剰余</td>
+        <td>x %= y</td>
+      </tr>
+
+      <tr>
+        <th>++</th>
+        <td>インクリメント</td>
+        <td>x++ / ++x</td>
+      </tr>
+
+      <tr>
+        <th>--</th>
+        <td>デクリメント</td>
+        <td>x-- / --x</td>
+      </tr>
+
+      <tr>
+        <th>&</th>
+        <td>ビット演算子・AND</td>
+        <td>x = y & z</td>
+      </tr>
+
+      <tr>
+        <th>|</th>
+        <td>ビット演算子・OR</td>
+        <td>x = y | z</td>
+      </tr>
+
+      <tr>
+        <th>^</th>
+        <td>ビット演算子・XOR</td>
+        <td>x = y ^ z</td>
+      </tr>
+
+      <tr>
+        <th>~</th>
+        <td>ビット演算子・ビット反転</td>
+        <td>x = ~y</td>
+      </tr>
+
+      <tr>
+        <th><<</th>
+        <td>ビットシフト演算子・左シフト</td>
+        <td>x = y << シフト数</td>
+      </tr>
+
+      <tr>
+        <th>>></th>
+        <td>ビットシフト演算子・算術右シフト</td>
+        <td>x = y >> シフト数</td>
+      </tr>
+
+      <tr>
+        <th>>>></th>
+        <td>ビットシフト演算子・論理右シフト</td>
+        <td>x = y >>> シフト数</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="5">テーブル</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      テーブルとは、キーと値のぺア（スロット）からなる集合（連想配列）です。<br>
+      テーブルそのものは参照型なのでコピーするには clone 命令を使います。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 空のテーブルを定義します。</strong>
+<strong class="keyword">local</strong> a = {};
+
+<strong class="comment">// テーブルの初期値をセットします。</strong>
+<strong class="keyword">local</strong> b = {
+  [1] = "RPG",
+  ["key"] = 10,
+  key2 = "Game",    <strong class="comment">// ["key2"] = "Game" と同義です。</strong>
+  <strong class="comment">// 末尾に , を入れても問題ありません。</strong>
+};
+
+<strong class="comment">// テーブル b をコピーします。</strong>
+<strong class="keyword">local</strong> c = <strong class="keyword">clone</strong> b;
+
+b[1] = "Next";     <strong class="comment">// テーブルの要素には添え字でアクセスできます。</strong>
+b["key"] = "1.00";
+b.key = "1.00";    <strong class="comment">// b["key"] = "1.00" と同義ですが、この記法はキー文字列が識別子として扱える場合のみ有効です。</strong>
+
+a.key = 10;        <strong class="comment">// = を使って存在しないキーを指定した場合はエラーとなります。</strong>
+a.key <- 10;       <strong class="comment">// <- を使うことでテーブル a に key というスロットを追加して値を代入できます。</strong>
+a.key <- 20;       <strong class="comment">// 既に存在するキーは値が上書きされます。</strong>
+
+<strong class="comment">// テーブル a から スロット key を削除してその値 (20) を取り出します。</strong>
+<strong class="keyword">local</strong> temp = <strong class="keyword">delete</strong> a.key;
+    </code></pre>
+
+    <h4>デフォルト委譲メソッド</h4>
+    <p>
+      テーブルにも、データ型と同様にデフォルト委譲メソッドを持っています。<br>
+      (テーブル名).メソッド名() で呼び出すことができます。<br>
+    </p>
+
+    <table style="margin-left: 30px">
+      <tr>
+        <td width="200">.len()</td>
+        <td>スロット数を返す</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="6">配列</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      配列とは、変数が連続して並んだ形をとるものです。<br>
+      テーブルより高速でメモリ消費量も少なく済むため、こちらの方を積極的に利用することをお勧めします。<br>
+      こちらもテーブルと同じく参照型なので、テーブルと同様に clone 命令を使ってコピーします。<br>
+      各要素には添え字を使ってアクセスします。添え字のインデックスは 0 起点です。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 空の配列を定義します。</strong>
+<strong class="keyword">local</strong> arr = [];
+
+<strong class="comment">// 配列の初期値をセットします。</strong>
+<strong class="keyword">local</strong> arr = [
+  "val1",
+  "val2",
+  <strong class="comment">// 末尾に , を入れても問題ありません。</strong>
+];
+
+<strong class="comment">// 100個の要素を持つ配列を作成し、-1 で初期化します。</strong>
+<strong class="keyword">local</strong> arr2 = <strong class="keyword">array</strong>(100, -1);
+arr2[0] = 0;    <strong class="comment">// 添え字で要素へアクセスします。</strong>
+arr2[100] = 1;  <strong class="comment">// 範囲外の添え字を参照した場合はエラーとなります。</strong>
+    </code></pre>
+
+    <h4>デフォルト委譲メソッド</h4>
+    <p>
+      配列も、テーブルと同様にデフォルト委譲メソッドを持っています。<br>
+      (配列名).メソッド名() で呼び出すことができます。<br>
+    </p>
+
+    <table style="margin-left: 30px">
+      <tr>
+        <td width="250">.len()</td>
+        <td>要素数を返す</td>
+      </tr>
+      <tr>
+        <td>.append(VALUE)</td>
+        <td>配列の末尾に要素を追加する</td>
+      </tr>
+      <tr>
+        <td>.extend(ARRAY)</td>
+        <td>配列 ARRAY の要素を、先頭から順にこの配列の末尾に追加する</td>
+      </tr>
+      <tr>
+        <td>.pop()</td>
+        <td>末尾の要素を削除して、その値を返す</td>
+      </tr>
+      <tr>
+        <td>.top()</td>
+        <td>末尾の要素を取得する</td>
+      </tr>
+      <tr>
+        <td>.insert(INDEX, VALUE)</td>
+        <td>指定した INDEX (0 起点) 位置に要素 VALUE を挿入する</td>
+      </tr>
+      <tr>
+        <td>.remove(INDEX)</td>
+        <td>指定したインデックス位置の要素を削除する</td>
+      </tr>
+      <tr>
+        <td>.resize(SIZE, [FILL])</td>
+        <td>
+          配列の要素数を SIZE に変更する<br>
+          元のサイズより大きくなる場合は FILL で初期化される
+        </td>
+      </tr>
+      <tr>
+        <td>.slice(START, [END])</td>
+        <td>この配列の START 以上 END 未満のインデックスの範囲をコピーして、新しい配列として返す</td>
+      </tr>
+      <tr>
+        <td>.sort([COMPARE_FUNCTION])</td>
+        <td>
+          配列を昇順に並び替える<br>
+          引数に比較用関数を渡すことでソート方法を定義できる<br>
+          比較用の関数 COMPARE_FUNCTION を指定する場合は2つの引数を取り、戻り値は整数値で返す必要がある
+        </td>
+      </tr>
+      <tr>
+        <td>.reverse()</td>
+        <td>要素を逆順にする</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="7">制御文</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      条件に応じてプログラムの流れを変化させる構文です。<br>
+    </p>
+
+    <h4>比較演算子</h4>
+    <p>
+      条件を示すために比較演算子というものを使います。<br>
+    </p>
+    <table style="margin-left: 30px">
+      <tr>
+        <td width="100">a == b</td>
+        <td>a と b が等しければ true</td>
+      </tr>
+      <tr>
+        <td>a != b</td>
+        <td>a と b が等しければ true</td>
+      </tr>
+      <tr>
+        <td>a < b</td>
+        <td>a が b より小さければ true</td>
+      </tr>
+      <tr>
+        <td>a <= b</td>
+        <td>a が b 以下であれば true</td>
+      </tr>
+      <tr>
+        <td>a > b</td>
+        <td>a が b より大きければ true</td>
+      </tr>
+      <tr>
+        <td>a >= b</td>
+        <td>a が b 以上であれば true</td>
+      </tr>
+      <tr>
+        <td>A && B</td>
+        <td>比較式A と 比較式B が両方 true であれば true</td>
+      </tr>
+      <tr>
+        <td>A || B</td>
+        <td>
+          比較式A と 比較式B の少なくともどちらか一方が true であれば true<br>
+          比較式A を評価した時点で true となった場合は 比較式B は評価されない<br>
+        </td>
+      </tr>
+      <tr>
+        <td>!(A)</td>
+        <td>比較式A の真偽を反転する</td>
+      </tr>
+    </table>
+
+    <h4>三項演算子</h4>
+    <p>
+      「条件を満たすならA、満たさないならB」と2通りの値を取るための式を作ります。<br>
+      後述の条件分岐で代用できますが、簡単な処理であれば一行で記述できるため可読性が向上します。<br>
+    </p>
+
+    <pre><code>
+<strong class="keyword">local</strong> temp = (a == <strong class="keyword">null</strong> ? "空です" : "値が入っています");
+    </code></pre>
+
+    <h4>条件分岐</h4>
+    <p>
+      与えられた条件を満たす場合に実行されます。<br>
+      満たさなかった場合は else 以降が実行されますが、省略しても構いません。<br>
+    </p>
+    <pre><code>
+<strong class="keyword">if</strong> (a == 0) {
+  <strong class="comment">// a が０であるとき実行されます。</strong>
+} <strong class="keyword">else if</strong> (a < 0) {
+  <strong class="comment">// a が負であるとき実行されます。</strong>
+} <strong class="keyword">else</strong> {
+  <strong class="comment">// a が正であるとき実行されます。</strong>
+}
+    </code></pre>
+
+    <h4>場合分け</h4>
+    <p>
+      ある変数の値について、定数で個別に評価します。<br>
+      break キーワードで場合分けのブロックから脱出します。<br>
+      break キーワードを使わなかった場合、次々に下のラベルの処理へと進んでしまいます（フォールスルー）。
+    </p>
+
+    <pre><code>
+<strong class="keyword">switch</strong> (a) {
+  <strong class="keyword">case</strong> 0:
+    <strong class="comment">// a の値が数値 0 に一致する場合に実行されます。</strong>
+    <strong class="keyword">break</strong>;
+  <strong class="keyword">case</strong> "STR":
+    <strong class="comment">// a の値が文字列 "STR" に一致する場合に実行されます。</strong>
+    <strong class="keyword">break</strong>;
+  <strong class="keyword">default</strong>:
+    <strong class="comment">// いずれも満たさなかった場合に実行されます。</strong>
+    <strong class="keyword">break</strong>;
+}
+    </code></pre>
+
+    <h4>条件付き繰り返し</h4>
+    <p>
+      条件を満たす間、処理を繰り返します。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 条件の判定を最初に行います。</strong>
+<strong class="keyword">while</strong> (a == 0) {
+  <strong class="comment">// 繰り返す処理</strong>
+  <strong class="comment">// 最初から a が 0 である場合、一度も実行されません。</strong>
+}
+
+<strong class="comment">// 条件の判定を最後に行います。</strong>
+<strong class="keyword">do</strong> {
+  <strong class="comment">// 繰り返す処理</strong>
+  <strong class="comment">// 最初から a が 0 であっても、必ず一回は実行されます。</strong>
+} <strong class="keyword">while</strong> (a == 0);
+    </code></pre>
+
+    <h4>回数付き繰り返し</h4>
+    <p>
+      for文と呼ばれるもので、一般的に指定回数分だけ繰り返すときに使います。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 5回繰り返します。</strong>
+<strong class="keyword">for</strong> (<strong class="keyword">local</strong> i = 0; i < 5; i++) {
+  <strong class="comment">// 最初に初期化（左の式）を行います。</strong>
+  <strong class="comment">// 次に継続判定（中央の式）を行います。</strong>
+  <strong class="comment">// 継続判定を満たしていれば処理を実行し、最後に再初期化式（右の式）を実行します。</strong>
+  <strong class="comment">// 再び継続判定を行い、式を満たさなくなればブロックを脱出します。</strong>
+}
+    </code></pre>
+
+    <h4>要素分繰り返し</h4>
+    <p>
+      与えられた配列やテーブルの要素分だけ繰り返します。<br>
+      配列の場合は添え字の小さい順から処理されますが、テーブルの場合は処理される順序は不定です。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 配列 arr の要素分だけ繰り返します。</strong>
+<strong class="keyword">foreach</strong> (val <strong class="keyword">in</strong> arr) {
+  <strong class="comment">// val に対する処理</strong>
+}
+
+<strong class="comment">// テーブル tbl のスロット分だけ繰り返します。</strong>
+<strong class="keyword">foreach</strong> (key, val <strong class="keyword">in</strong> tbl) {
+  <strong class="comment">// key にはキー、val には値が格納されます。</strong>
+  <strong class="comment">// 配列の場合は key の部分にインデックスが格納されます。</strong>
+}
+    </code></pre>
+
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="8">関数</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      関数とは、あるまとまった処理のかたまりのようなものです。<br>
+      関数の処理に必要となる材料のことを「引数」といい、処理結果の値を「戻り値」といいます。<br>
+      Squirrelでは、コード中に型を明示することはありませんので、戻り値を返さなくても問題ありません。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 2つの数の積を返す関数です。</strong>
+<strong class="keyword">function</strong> foo(a, b) {
+  <strong class="comment">// return で戻り値を出して関数を終了します。</strong>
+  <strong class="keyword">return</strong> a * b;
+}
+
+<strong class="comment">// 関数を呼び出します。12 と出力されます。</strong>
+<strong class="keyword">print</strong>(foo(2, 6));
+    </code></pre>
+
+    <h4>無名関数</h4>
+    <p>
+      関数の定義はそれ自体がオブジェクトとなり、これを関数オブジェクトと呼びます。<br>
+      引数や変数に関数オブジェクトを代入することで、関数の定義を動的に切り替える等といったことが簡単にできるようになります。<br>
+      関数の定義と同時に変数に代入するための関数オブジェクトは、関数名を持たない「無名関数」と呼ばれます。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 関数オブジェクトを格納するローカル変数です。</strong>
+<strong class="keyword">local</strong> foo = <strong class="keyword">function</strong>(a, b) {
+  <strong class="comment">// return で戻り値を出して関数を終了します。</strong>
+  <strong class="keyword">return</strong> a * b;
+}
+
+<strong class="comment">// 関数の定義を後から置き換えることもできます。</strong>
+foo = <strong class="keyword">function</strong>(a) {
+  <strong class="keyword">return</strong> a * a;
+}
+
+<strong class="comment">// 関数を呼び出します。関数の定義を置き換えたので、引数の個数が多すぎてエラーとなります。</strong>
+<strong class="keyword">print</strong>(foo(1, 5));
+    </code></pre>
+
+    <h4>デフォルト引数</h4>
+    <p>
+      引数の既定値を与えることができます。<br>
+      既定値が与えられている引数は省略することができます。<br>
+      ただし、デフォルト引数の後ろに省略できない引数を定義することはできません。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 既定値を持たせます。</strong>
+<strong class="keyword">function</strong> foo(a, b = <strong class="keyword">true</strong>) {
+  <strong class="keyword">if</strong> (b == <strong class="keyword">true</strong>) {
+    <strong class="keyword">return</strong> a;
+  } <strong class="keyword">else</strong> {
+    <strong class="keyword">return</strong> -a;
+  }
+}
+
+<strong class="comment">// 関数を呼び出します。</strong>
+<strong class="keyword">print</strong>(foo(1));
+
+<strong class="comment">// このような関数は定義できません。</strong>
+<strong class="keyword">function</strong> foo(a, b = <strong class="keyword">true</strong>, c) {
+  <strong class="comment">// 何らかの処理</strong>
+}
+    </code></pre>
+
+    <h4>可変長引数</h4>
+    <p>
+      引数の数が不定なものを、可変長引数といいます。<br>
+      引数リストの最後に記述することで、それ以降の引数を無数に渡せるようになります。<br>
+      可変長引数として渡された値を取り出すには、各引数の値を格納した疑似配列 vargv と、引数の個数を格納した疑似変数 vargc を使います。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 第２引数以降は可変長引数とします。</strong>
+<strong class="keyword">function</strong> foo(a, ...) {
+  <strong class="keyword">print</strong>(a);
+  <strong class="keyword">for</strong> (<strong class="keyword">local</strong> i = 0; i < <strong class="keyword">vargc</strong>; i++) {
+    <strong class="keyword">print</strong>(<strong class="keyword">vargv</strong>[i]);
+  }
+}
+
+<strong class="comment">// 関数を呼び出します。</strong>
+foo("1st", "2nd", "3rd", "4th");
+    </code></pre>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="9">クラス</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      Squirrelではクラスを標準でサポートしています。<br>
+      クラスを実体化したものを「インスタンス」といいます。<br>
+      インスタンスは参照型なので、配列やテーブルと同様に clone 命令を使ってコピーします。<br>
+    </p>
+    <p>
+      クラスに含まれる変数や関数をメンバーといいます。<br>
+      C++やJavaではアクセシビリティを設定することで「隠蔽」や「カプセル化」という概念を実現しますが、Squirrelではすべてのメンバーが public な状態となります。<br>
+      また、コンストラクターには対応していますが、一方でデストラクターという概念はありません。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// クラスを定義します。</strong>
+<strong class="keyword">class</strong> Vector2 {
+  x <- 0;
+  y <- 0;
+
+  <strong class="comment">// コンストラクター: インスタンスが生成されるときに呼び出されます。</strong>
+  <strong class="keyword">constructor</strong>(px = 0, py = 0) {
+    <strong class="comment">// 自身のメンバーであることを明示するために this. を付けます。</strong>
+    <strong class="keyword">this</strong>.x = px;
+    <strong class="keyword">this</strong>.y = py;
+  }
+
+  <strong class="comment">// 値を出力するメンバー関数</strong>
+  <strong class="keyword">function</strong> Print() {
+    <strong class="keyword">print</strong>(<strong class="keyword">this</strong>.x + ", " + <strong class="keyword">this</strong>.y);
+  }
+};
+
+<strong class="comment">// Vector2 のインスタンスを生成します。</strong>
+<strong class="keyword">local</strong> pos = Vector2(1, 2);
+pos.Print();    <strong class="comment">// "1, 2" が出力されます。</strong>
+    </code></pre>
+
+    <h4>クラスの継承</h4>
+    <p>
+      あるクラスのメンバーや機能をそのまま引き継いで新しいクラスを作ることを「継承」といいます。<br>
+      Squirrelでも継承に対応しており、メンバー関数はオーバーライド（再定義）することができます。<br>
+      ただし、コンストラクターに限っては派生したクラスのものだけが呼び出されます。<br>
+      よって、親クラスのコンストラクターは呼び出されませんので必要な場合は明示的に呼び出す必要があります。<br>
+    </p>
+
+    <pre><code>
+<strong class="comment">// 親クラスを定義します。</strong>
+<strong class="keyword">class</strong> Vector2 {
+  x <- 0;
+  y <- 0;
+
+  <strong class="comment">// コンストラクター: インスタンスが生成されるときに呼び出されます。</strong>
+  <strong class="keyword">constructor</strong>(px = 0, py = 0) {
+    <strong class="comment">// 自身のメンバーであることを明示するために this. を付けます。</strong>
+    <strong class="keyword">this</strong>.x = px;
+    <strong class="keyword">this</strong>.y = py;
+  }
+
+  <strong class="comment">// 値を出力するメンバー関数</strong>
+  <strong class="keyword">function</strong> Print() {
+    <strong class="keyword">print</strong>(<strong class="keyword">this</strong>.x + ", " + <strong class="keyword">this</strong>.y);
+  }
+};
+
+<strong class="comment">// 派生クラスを定義します。</strong>
+<strong class="keyword">class</strong> Vector3 <strong class="keyword">extends</strong> Vector2 {
+  z <- 0;
+
+  <strong class="comment">// コンストラクター: 親クラスのコンストラクターを明示的に呼び出します。</strong>
+  <strong class="keyword">constructor</strong>(px = 0, py = 0, pz = 0) {
+    Vector2.<strong class="keyword">constructor</strong>(px, py);
+    <strong class="keyword">this</strong>.z = pz;
+  }
+
+  <strong class="comment">// 値を出力するメンバー関数をオーバーライドします。</strong>
+  <strong class="keyword">function</strong> Print() {
+    <strong class="keyword">print</strong>(<strong class="keyword">this</strong>.x + ", " + <strong class="keyword">this</strong>.y + ", " + <strong class="keyword">this</strong>.z);
+  }
+};
+
+<strong class="comment">// Vector3 のインスタンスを生成します。</strong>
+<strong class="keyword">local</strong> pos = Vector3(1, 2, 3);
+pos.Print();    <strong class="comment">// "1, 2, 3" が出力されます。</strong>
+    </code></pre>
+
+  </div>
+  <hr>
+
+</div><!-- /#mainContainer -->
+</div><!-- /#container -->
+</body>
+</html>

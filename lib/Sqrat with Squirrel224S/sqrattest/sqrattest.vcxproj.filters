@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="sqrat">
+      <UniqueIdentifier>{13effc61-e8e4-4802-bab8-eced87ec1fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unit Tests">
+      <UniqueIdentifier>{e8d82d76-c623-465a-90ac-ea14229eb135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{fd4ef022-83f8-4e9a-8d4c-fdc4060c3e99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassBinding.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassInstances.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassProperties.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstBindings.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionOverload.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportTest.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptLoading.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelFunctions.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TableBinding.cpp">
+      <Filter>Unit Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fixture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratAllocator.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratClass.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratClassType.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratConst.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratFunction.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratGlobalMethods.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratMemberMethods.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratObject.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratOverloadMethods.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratScript.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratTable.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratTypes.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\sqrat\sqratUtil.h">
+      <Filter>sqrat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\hello.nut">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\samplemodule.nut">
+      <Filter>scripts</Filter>
+    </None>
+  </ItemGroup>
+</Project>

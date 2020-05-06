@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<DBProperty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <strGameTitle>ダークレオナルドの逆襲</strGameTitle>
+  <strGameVersion>1.00</strGameVersion>
+  <sizeWindowSize>
+    <Width>640</Width>
+    <Height>480</Height>
+  </sizeWindowSize>
+  <boolAllowFullScreen>true</boolAllowFullScreen>
+  <strNowLoadingFileName>Materials\NowLoading.png</strNowLoadingFileName>
+  <strIconFileName>Materials\creation-icon_003.png</strIconFileName>
+  <intStandardTransparentColor>-16727872</intStandardTransparentColor>
+  <intDrawInterpolation>1</intDrawInterpolation>
+  <boolEffectAsyncLoadMode>false</boolEffectAsyncLoadMode>
+  <boolEnabledSystemResource>true</boolEnabledSystemResource>
+  <boolEnabledLimitedDebug>false</boolEnabledLimitedDebug>
+  <intEffectFPS>30</intEffectFPS>
+  <intShadowTransparent>80</intShadowTransparent>
+  <intFogTransparent>150</intFogTransparent>
+  <intTileSize>32</intTileSize>
+  <intIconSize>24</intIconSize>
+  <intMaxPartyCount>4</intMaxPartyCount>
+  <intMaxLevel>99</intMaxLevel>
+  <intMaxSaveDataCount>50</intMaxSaveDataCount>
+  <edtEnemyLevelExpression>([$0]+[$1]+[$2]+[$3]+[$4]+[$5])/6.0</edtEnemyLevelExpression>
+  <edtDBCharGraphicsViewRange>
+    <Location>
+      <X>30</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>30</Width>
+      <Height>30</Height>
+    </Size>
+    <X>30</X>
+    <Y>0</Y>
+    <Width>30</Width>
+    <Height>30</Height>
+  </edtDBCharGraphicsViewRange>
+</DBProperty>

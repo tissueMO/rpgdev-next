@@ -1,0 +1,32 @@
+﻿//フォルダー構造一括生成用
+$ProjectSystem
+	EVTemplates
+	Project.json
+	Schedule.eds
+Texts
+	$Scripts
+		$MapEvents
+		$System
+			$EventHandler.nut
+			$Constants.nut
+			$Functions.nut
+			$SceneMainTitle.nut
+			$SceneMainMap.nut
+			$SceneSubMenu.nut
+			$SceneSubShop.nut
+			$SceneSubBattle.nut
+			$DBChar.nut
+			$DBClass.nut
+			$DBItem.nut
+			$DBSkill.nut
+			$DBEnemy.nut
+			$DBState.nut
+			$DBUnit.nut
+Databases
+	$UserDatabases
+	$Effects
+		$Top.nut
+	$Tilesets
+Fonts
+Maps
+Materials

@@ -1,0 +1,5 @@
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextIDNames	DBColumnButtonInputIDNames	DBColumnTextIDValues	DBColumnButtonInputIDValues	DBColumnTextIDValues	DBColumnButtonInputIDValues	DBColumnTextIDValues	DBColumnButtonInputIDValues	DBColumnText	DBColumnButtonInputAddon	DBColumnText	DBColumnButtonToScript
+FixedID	ID	名前	属性		習得スキル		パラメーター変動率		個別変数		アドオン		注釈	SQ
+1033389091	1	主人公					948231691;120|538569744;110|161741617;110				6;1879758184;1|6;1310267888;1|6;1350192641;1|6;342806003;1|2;579572138;150			
+1346991009	2	戦士					1223389434;120|948231691;50|538569744;150|161741617;80				6;1879758184;1|6;342806003;1|6;1310267888;1|6;1350192641;1			
+

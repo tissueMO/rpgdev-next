@@ -1,0 +1,2 @@
+﻿//財宝が入手された後かどうか
+return (Game.SceneMap.MapData.ThisEVData.SelfValues.Get($1).Value == TRUE);

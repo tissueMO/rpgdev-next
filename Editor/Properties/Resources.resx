@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Regux_ParameterInExpression" xml:space="preserve">
+    <value>\[\$(?&lt;ID&gt;\d+)\]</value>
+    <comment>式中のID指定</comment>
+  </data>
+  <data name="MsgQ_Save" xml:space="preserve">
+    <value>編集中の$を保存しますか？</value>
+    <comment>保存確認</comment>
+  </data>
+  <data name="Path_Scripts_Item" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBItem.nut</value>
+  </data>
+  <data name="MsgE_ForbidOverlap" xml:space="preserve">
+    <value>$を重複させることはできません。</value>
+    <comment>重複禁止</comment>
+  </data>
+  <data name="Split_LongData" xml:space="preserve">
+    <value>|</value>
+    <comment>長いデータ(単純リストの区切り記号を含むリスト)の区切り記号</comment>
+  </data>
+  <data name="Path_GameProgram" xml:space="preserve">
+    <value>Game.exe</value>
+    <comment>ゲームプログラムのファイル名</comment>
+  </data>
+  <data name="SQ_BlockBreak" xml:space="preserve">
+    <value>break;</value>
+    <comment>ブロックを脱出</comment>
+  </data>
+  <data name="MsgE_NGDeleteRoot" xml:space="preserve">
+    <value>システムフォルダー/ファイルは$できません。</value>
+    <comment>行動制限</comment>
+  </data>
+  <data name="SQ_EffectWaitBreak" xml:space="preserve">
+    <value>Effect.WaitBreak();</value>
+    <comment>エフェクトの再生待機解除</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\door.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_Scripts_Char" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBChar.nut</value>
+  </data>
+  <data name="SQ_EVSelfValue" xml:space="preserve">
+    <value>(!Game.SceneMap.MapData.EVGetData($1).IsNull()&amp;&amp;Game.SceneMap.MapData.EVGetData($1).SelfValues.Set($2,$3))</value>
+    <comment>イベント個別変数に値をセットする関数呼び出し</comment>
+  </data>
+  <data name="Path_DBs_System" xml:space="preserve">
+    <value>Databases\System.xml</value>
+  </data>
+  <data name="Extension_Tileset" xml:space="preserve">
+    <value>.tile</value>
+  </data>
+  <data name="NG_SystemFolderSymbol" xml:space="preserve">
+    <value>$</value>
+    <comment>システムフォルダー名の頭文字</comment>
+  </data>
+  <data name="アイコン大" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\アイコン大.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgQ_Confirm" xml:space="preserve">
+    <value>$してもよろしいですか？</value>
+    <comment>動作前確認</comment>
+  </data>
+  <data name="SQ_UserString" xml:space="preserve">
+    <value>US</value>
+    <comment>ユーザー文字列のプレフィックス</comment>
+  </data>
+  <data name="NG_String" xml:space="preserve">
+    <value>,;"|</value>
+    <comment>追加的にこのソフトでファイル名として扱えない文字群</comment>
+  </data>
+  <data name="Path_DBs_EffectScriptCenter" xml:space="preserve">
+    <value>Databases\$Effects\$Top.nut</value>
+    <comment>エフェクトスクリプトの代表</comment>
+  </data>
+  <data name="Path_DBs_Char" xml:space="preserve">
+    <value>Databases\Char.tsv</value>
+  </data>
+  <data name="SQ_ChangeMap" xml:space="preserve">
+    <value>Game.SceneMap.ChangeMap($1, $2, $3, $4);</value>
+    <comment>マップを移動させるコマンド</comment>
+  </data>
+  <data name="Sche_MilestoneName" xml:space="preserve">
+    <value>(マイルストーン)</value>
+    <comment>マイルストーン表示</comment>
+  </data>
+  <data name="SQ_EffectFunc" xml:space="preserve">
+    <value>function PlayEffect($1, $2, $3)</value>
+    <comment>エフェクトの基本関数</comment>
+  </data>
+  <data name="Extension_Graphics" xml:space="preserve">
+    <value>.png;.bmp;.jpg;.dds;.argb;.tga</value>
+    <comment>対応するグラフィック拡張子</comment>
+  </data>
+  <data name="Path_PrjSys" xml:space="preserve">
+    <value>$ProjectSystem\</value>
+    <comment>プロジェクトのシステムファイル群</comment>
+  </data>
+  <data name="Requx_SQSelfValueForMapTest" xml:space="preserve">
+    <value>&amp;&amp;Game\.SceneMap\.MapData\.EVGetData\((.*)\)\.SelfValues\.Set\((.*),(.*)\)\)</value>
+    <comment>マップテスト用のイベント個別変数のセット構文パターン</comment>
+  </data>
+  <data name="MsgE_NothingInput" xml:space="preserve">
+    <value>$が設定されていません。</value>
+    <comment>入力必須項目</comment>
+  </data>
+  <data name="Path_DBs" xml:space="preserve">
+    <value>Databases\</value>
+    <comment>データベースフォルダー</comment>
+  </data>
+  <data name="Filter_All" xml:space="preserve">
+    <value>すべてのファイル (*.*)|*.*</value>
+  </data>
+  <data name="SQ_GetColor" xml:space="preserve">
+    <value>Game.DXLib.GetColor($)</value>
+    <comment>色を取得</comment>
+  </data>
+  <data name="SQ_EffectLoadGraph" xml:space="preserve">
+    <value>Effect.LoadGraph($);</value>
+    <comment>エフェクトのレイヤーグラフィック読み込み</comment>
+  </data>
+  <data name="SQ_ScriptShortName" xml:space="preserve">
+    <value>SQ</value>
+    <comment>スクリプトの略号</comment>
+  </data>
+  <data name="Extension_Map" xml:space="preserve">
+    <value>.map</value>
+    <comment>マップファイルの拡張子</comment>
+  </data>
+  <data name="Path_DBs_Unit" xml:space="preserve">
+    <value>Databases\Unit.tsv</value>
+  </data>
+  <data name="Path_DBs_Class" xml:space="preserve">
+    <value>Databases\Class.tsv</value>
+  </data>
+  <data name="icon_editor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_editor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="autorun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\autorun.inf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_Scripts_Functions" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$Functions.nut</value>
+  </data>
+  <data name="SQ_EVScript_PageIndex" xml:space="preserve">
+    <value>pageIndex</value>
+    <comment>各イベントのスクリプト関数のページ番号</comment>
+  </data>
+  <data name="SQ_Include" xml:space="preserve">
+    <value>Game.SQInclude($);</value>
+    <comment>他のスクリプトをインクルードする関数</comment>
+  </data>
+  <data name="SQ_EVScript" xml:space="preserve">
+    <value>function EV$(%1, %2)</value>
+    <comment>各イベントのスクリプト関数</comment>
+  </data>
+  <data name="Split_Argument" xml:space="preserve">
+    <value>,</value>
+    <comment>引数の区切り記号</comment>
+  </data>
+  <data name="MsgE_Cannot" xml:space="preserve">
+    <value>$はできません。</value>
+    <comment>不可能な操作</comment>
+  </data>
+  <data name="MsgE_FileExists" xml:space="preserve">
+    <value>同名の$が既に存在します。</value>
+    <comment>ファイルが作成できない</comment>
+  </data>
+  <data name="Treasure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\treasure.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_Manual" xml:space="preserve">
+    <value>Manual\index.html</value>
+    <comment>取扱説明書</comment>
+  </data>
+  <data name="SQ_GotTreasureMessage" xml:space="preserve">
+    <value>$ を手に入れた！</value>
+  </data>
+  <data name="MsgE_FileNameInvarid" xml:space="preserve">
+    <value>無効な$名です。</value>
+    <comment>パスに指定できない文字を含む</comment>
+  </data>
+  <data name="icon_gameprogram" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_gameprogram.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Code_CommentStart" xml:space="preserve">
+    <value>/*</value>
+    <comment>コメント開始</comment>
+  </data>
+  <data name="Split_SimpleList" xml:space="preserve">
+    <value>;</value>
+    <comment>単純リスト(この記号が入らない文字列を扱うリスト)の区切り記号</comment>
+  </data>
+  <data name="SQ_UserInteger" xml:space="preserve">
+    <value>UI</value>
+    <comment>ユーザー整数のプレフィックス</comment>
+  </data>
+  <data name="SQ_EffectFlash" xml:space="preserve">
+    <value>Effect.Flash($);</value>
+    <comment>エフェクトのフラッシュコマンド</comment>
+  </data>
+  <data name="Path_Scripts_State" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBState.nut</value>
+  </data>
+  <data name="Path_PrjSys_PrjFile" xml:space="preserve">
+    <value>$ProjectSystem\Project.json</value>
+    <comment>プロジェクトファイル</comment>
+  </data>
+  <data name="Path_Texts" xml:space="preserve">
+    <value>Texts\</value>
+    <comment>テキストフォルダー</comment>
+  </data>
+  <data name="Path_DBs_Item" xml:space="preserve">
+    <value>Databases\Item.tsv</value>
+  </data>
+  <data name="MsgW_ReadOnly" xml:space="preserve">
+    <value>現在他のユーザーによって編集されているため、閲覧モードで開きます。編集結果は保存できませんのでご注意下さい。</value>
+    <comment>読み取り専用で開く</comment>
+  </data>
+  <data name="SQ_EffectShake" xml:space="preserve">
+    <value>Effect.Shake($);</value>
+    <comment>エフェクトの画面振動コマンド</comment>
+  </data>
+  <data name="Split_ColorRGB" xml:space="preserve">
+    <value>,</value>
+    <comment>色成分の区切り記号</comment>
+  </data>
+  <data name="TreasureWithKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\treasurewithkey.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_Scripts_Unit" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBUnit.nut</value>
+  </data>
+  <data name="Path_Scripts_Skill" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBSkill.nut</value>
+  </data>
+  <data name="Path_ArchiveData" xml:space="preserve">
+    <value>Data</value>
+    <comment>発行先フォルダーのアーカイブ対象フォルダー</comment>
+  </data>
+  <data name="Text_ReplacedMark" xml:space="preserve">
+    <value>済</value>
+    <comment>置換済みの単語につけるマーク</comment>
+  </data>
+  <data name="MsgE_NothingJumpList" xml:space="preserve">
+    <value>ジャンプリストに該当する行頭文字列が見つかりませんでした。</value>
+    <comment>ジャンプリスト</comment>
+  </data>
+  <data name="SQ_EVSetCommand" xml:space="preserve">
+    <value>Game.SceneMap.MapData.SetEV</value>
+    <comment>イベントを生成する関数</comment>
+  </data>
+  <data name="Split_IDNamePair" xml:space="preserve">
+    <value>:</value>
+    <comment>IDと名前の区切り記号</comment>
+  </data>
+  <data name="Path_DBs_Tilesets" xml:space="preserve">
+    <value>Databases\$Tilesets\</value>
+  </data>
+  <data name="Path_DBs_Tileset" xml:space="preserve">
+    <value>Databases\Tileset.tsv</value>
+  </data>
+  <data name="MsgE_Failed" xml:space="preserve">
+    <value>$に失敗しました。</value>
+    <comment>操作失敗</comment>
+  </data>
+  <data name="Code_Comment1" xml:space="preserve">
+    <value>//</value>
+    <comment>コメント行</comment>
+  </data>
+  <data name="SQ_ValueLocal" xml:space="preserve">
+    <value>local </value>
+    <comment>ローカル変数</comment>
+  </data>
+  <data name="Path_DBs_UserDBs" xml:space="preserve">
+    <value>Databases\$UserDatabases\</value>
+    <comment>ユーザーデータベースフォルダー</comment>
+  </data>
+  <data name="Form_TeamSplitRate" xml:space="preserve">
+    <value>0.75</value>
+    <comment>チームバーが占有する領域率の差分</comment>
+  </data>
+  <data name="Filter_Graphics" xml:space="preserve">
+    <value>画像ファイル (*.jpg;*.png;*.bmp)|*.jpg;*.png;*.bmp</value>
+    <comment>OpenFileDialog用</comment>
+  </data>
+  <data name="SQ_EVExtraMoveDo" xml:space="preserve">
+    <value>DoExtraMove($)</value>
+    <comment>イベント臨時移動を実行</comment>
+  </data>
+  <data name="SQ_ValueConstant" xml:space="preserve">
+    <value>const </value>
+    <comment>定数</comment>
+  </data>
+  <data name="Link" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\link.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SQ_UserFlag" xml:space="preserve">
+    <value>UF</value>
+    <comment>ユーザーフラグのプレフィックス</comment>
+  </data>
+  <data name="Path_DBs_Element" xml:space="preserve">
+    <value>Databases\Element.tsv</value>
+  </data>
+  <data name="SQ_PlayerMapObject" xml:space="preserve">
+    <value>Game.SceneMap.MapData.Player.MapObject</value>
+    <comment>プレイヤーのマップ上のオブジェクトインスタンス</comment>
+  </data>
+  <data name="SQ_EffectGetData" xml:space="preserve">
+    <value>local Effect = Game.DB.FDBEffect.GetEffectData($);</value>
+    <comment>再生対象エフェクトのオブジェクトを取得する処理</comment>
+  </data>
+  <data name="Extension_ProjectSystemFile" xml:space="preserve">
+    <value>.eds</value>
+    <comment>プロジェクトのシステムファイル</comment>
+  </data>
+  <data name="Path_PrjSys_EVTemplate" xml:space="preserve">
+    <value>$ProjectSystem\EVTemplates\</value>
+    <comment>イベントテンプレート</comment>
+  </data>
+  <data name="Path_DBs_UserDB" xml:space="preserve">
+    <value>Databases\UserDB.tsv</value>
+  </data>
+  <data name="SQ_EffectDraw" xml:space="preserve">
+    <value>Effect.Draw($);</value>
+    <comment>エフェクトの描画コマンド</comment>
+  </data>
+  <data name="Path_Materials" xml:space="preserve">
+    <value>Materials\</value>
+    <comment>素材フォルダー</comment>
+  </data>
+  <data name="MsgE_AcccessError" xml:space="preserve">
+    <value>他のユーザーが編集しているため、ファイルを操作できません。</value>
+    <comment>アクセス権限ロック</comment>
+  </data>
+  <data name="ProjectFolderDefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\PlainText\ProjectFolderDefault.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SquirrelKeywords" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\PlainText\SquirrelKeywords.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_DBs_Effect" xml:space="preserve">
+    <value>Databases\Effect.tsv</value>
+  </data>
+  <data name="SQ_EVSetFunc" xml:space="preserve">
+    <value>function SetupMapEvents()</value>
+    <comment>マップ内のすべてのイベントを配置する関数</comment>
+  </data>
+  <data name="Extension_SQ" xml:space="preserve">
+    <value>.nut</value>
+    <comment>スクリプトの拡張子</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>RPG Developer NEXT</value>
+    <comment>アプリケーション名</comment>
+  </data>
+  <data name="Path_Scripts_Enemy" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBEnemy.nut</value>
+  </data>
+  <data name="Person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\person.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SQCodeTree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\sqcodetree.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="Path_DBs_Material" xml:space="preserve">
+    <value>Databases\Material.tsv</value>
+  </data>
+  <data name="NG_FileExtension" xml:space="preserve">
+    <value>.db;.ini</value>
+    <comment>ファイルとして認識しない拡張子</comment>
+  </data>
+  <data name="Regux_SQFunction" xml:space="preserve">
+    <value>function (?&lt;here&gt;.+\))</value>
+    <comment>スクリプトの関数検索</comment>
+  </data>
+  <data name="Path_Scripts" xml:space="preserve">
+    <value>Texts\$Scripts\</value>
+    <comment>スクリプトフォルダー</comment>
+  </data>
+  <data name="SQ_ThisEVData" xml:space="preserve">
+    <value>Game.SceneMap.MapData.ThisEVData</value>
+    <comment>実行中のイベントのインスタンス</comment>
+  </data>
+  <data name="DoorLinkWithKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\doorlinkwithkey.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SQ_EVPageSetCommand" xml:space="preserve">
+    <value>Game.SceneMap.MapData.AddEVPage</value>
+    <comment>イベントのページを設定する関数</comment>
+  </data>
+  <data name="SQ_EVMoveSet" xml:space="preserve">
+    <value>AddMoveTask($1, $2, $3)</value>
+    <comment>イベント日常移動のパターンをセット</comment>
+  </data>
+  <data name="MsgW_ResultError" xml:space="preserve">
+    <value>処理中にエラーが発生しました。操作が完全に行われていない可能性があります。</value>
+    <comment>複雑でエラー箇所が特定できない</comment>
+  </data>
+  <data name="Extension_DB" xml:space="preserve">
+    <value>.tsv</value>
+    <comment>タブ区切りファイル</comment>
+  </data>
+  <data name="SQ_Function" xml:space="preserve">
+    <value>function </value>
+    <comment>関数の宣言</comment>
+  </data>
+  <data name="MsgW_ImportantWork" xml:space="preserve">
+    <value>$。よろしいですか？</value>
+    <comment>重要な操作前の確認</comment>
+  </data>
+  <data name="Code_CommentEnd" xml:space="preserve">
+    <value>*/</value>
+    <comment>コメント終了</comment>
+  </data>
+  <data name="Path_PrjSys_ScheduleFile" xml:space="preserve">
+    <value>$ProjectSystem\Schedule.eds</value>
+    <comment>スケジュール情報</comment>
+  </data>
+  <data name="Treasure2ndPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\treasure2ndpage.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SQ_ValueGlobal" xml:space="preserve">
+    <value>&lt;-</value>
+    <comment>グローバル変数</comment>
+  </data>
+  <data name="Sche_SectionAllWorkers" xml:space="preserve">
+    <value>(全員)</value>
+    <comment>セクション内の全担当者が対象</comment>
+  </data>
+  <data name="MsgE_InvaridPrj" xml:space="preserve">
+    <value>指定されたフォルダーは正しいプロジェクトフォルダーではありません。</value>
+    <comment>不正なプロジェクト</comment>
+  </data>
+  <data name="Path_DBs_Enemy" xml:space="preserve">
+    <value>Databases\Enemy.tsv</value>
+  </data>
+  <data name="Extension_Font" xml:space="preserve">
+    <value>.ttf;.ttc;.otf;.ttf;.fon</value>
+    <comment>フォントファイル</comment>
+  </data>
+  <data name="SQ_ShopAddItem" xml:space="preserve">
+    <value>Game.SceneMap.ShopData.Add($)</value>
+    <comment>商品リストに追加する処理</comment>
+  </data>
+  <data name="Regux_ArgumentList" xml:space="preserve">
+    <value>\((?&lt;here&gt;.+\));</value>
+    <comment>引数リストの抜き出し</comment>
+  </data>
+  <data name="Path_Fonts" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+  <data name="Path_DBs_EffectScripts" xml:space="preserve">
+    <value>Databases\$Effects\</value>
+  </data>
+  <data name="Path_GGS" xml:space="preserve">
+    <value>GuruGuruSMF4.dll</value>
+  </data>
+  <data name="Split_Size" xml:space="preserve">
+    <value>x</value>
+    <comment>サイズの区切り記号</comment>
+  </data>
+  <data name="Path_Scripts_Class" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$DBClass.nut</value>
+  </data>
+  <data name="SQ_EVExtraMoveSet" xml:space="preserve">
+    <value>SetExtraMove($1, $2, $3)</value>
+    <comment>イベント臨時移動のパターンをセット</comment>
+  </data>
+  <data name="Path_SQCompileLog" xml:space="preserve">
+    <value>RPGDeveloperNEXT_SQCompileResult.log</value>
+    <comment>スクリプトコンパイラーのログ</comment>
+  </data>
+  <data name="SQ_SignUserStart" xml:space="preserve">
+    <value>//################################################ The event script is as follows: ################################################</value>
+    <comment>スクリプト内のユーザー定義の部分開始</comment>
+  </data>
+  <data name="Path_Maps" xml:space="preserve">
+    <value>Maps\</value>
+    <comment>マップフォルダー</comment>
+  </data>
+  <data name="Path_GameProgramRelease" xml:space="preserve">
+    <value>Game_Release.exe</value>
+    <comment>ゲームプログラムのリリース版</comment>
+  </data>
+  <data name="MsgI_CompleteTextReplace" xml:space="preserve">
+    <value>終端まで置換しました。</value>
+    <comment>テキスト置換</comment>
+  </data>
+  <data name="Path_Scripts_MapEvents" xml:space="preserve">
+    <value>Texts\$Scripts\$MapEvents\</value>
+    <comment>イベントスクリプトフォルダー</comment>
+  </data>
+  <data name="DB_NoneItem" xml:space="preserve">
+    <value>(なし)</value>
+    <comment>依存先が存在しない</comment>
+  </data>
+  <data name="Path_DBs_Skill" xml:space="preserve">
+    <value>Databases\Skill.tsv</value>
+  </data>
+  <data name="Path_DBs_Init" xml:space="preserve">
+    <value>Databases\Init.tsv</value>
+  </data>
+  <data name="DoorWithKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\doorwithkey.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Path_PresetData" xml:space="preserve">
+    <value>PresetData</value>
+    <comment>デフォルト構成のプロジェクトフォルダー</comment>
+  </data>
+  <data name="Sche_NoneItem" xml:space="preserve">
+    <value>(なし)</value>
+    <comment>該当アイテムなし</comment>
+  </data>
+  <data name="MsgE_ReadOnly" xml:space="preserve">
+    <value>読み取り専用モードのため、保存操作は行えません。</value>
+    <comment>アクセス制御</comment>
+  </data>
+  <data name="SQ_EVScript_TypeID" xml:space="preserve">
+    <value>typeID</value>
+    <comment>各イベントのスクリプト関数のスクリプト種別</comment>
+  </data>
+  <data name="SQ_EffectSameCounter" xml:space="preserve">
+    <value>iTimes</value>
+    <comment>同一フレームの実行カウンター</comment>
+  </data>
+  <data name="SQ_EVMessage" xml:space="preserve">
+    <value>Game.SceneMap.ShowMessage($1, $2, $3);</value>
+    <comment>会話メッセージ</comment>
+  </data>
+  <data name="SQ_EffectSound" xml:space="preserve">
+    <value>Effect.PlaySE($);</value>
+    <comment>エフェクトのサウンド再生コマンド</comment>
+  </data>
+  <data name="SQ_EffectPlayingHandle" xml:space="preserve">
+    <value>iHandle</value>
+    <comment>再生中エフェクトの固有番号</comment>
+  </data>
+  <data name="License" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\PlainText\License.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="MsgE_NothingSelect" xml:space="preserve">
+    <value>$が選択されていません。</value>
+    <comment>選択必須項目</comment>
+  </data>
+  <data name="Extension_Sounds" xml:space="preserve">
+    <value>.mid;.mp3;.wav;.ogg</value>
+    <comment>対応するサウンド拡張子</comment>
+  </data>
+  <data name="Path_DBs_State" xml:space="preserve">
+    <value>Databases\State.tsv</value>
+  </data>
+  <data name="Extension_LoopSounds" xml:space="preserve">
+    <value>.mp3;.wav;.ogg</value>
+    <comment>ループ設定を行えるサウンドの種類</comment>
+  </data>
+  <data name="Path_Scripts_Constants" xml:space="preserve">
+    <value>Texts\$Scripts\$System\$Constants.nut</value>
+  </data>
+  <data name="Shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\shop.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SQ_EffectFrameCounter" xml:space="preserve">
+    <value>iFrame</value>
+    <comment>エフェクトの実行中フレーム番号</comment>
+  </data>
+  <data name="SQ_SignUserEnd" xml:space="preserve">
+    <value>//################################################ The event script is as above. ################################################</value>
+    <comment>スクリプト内のユーザー定義の部分終端</comment>
+  </data>
+  <data name="Path_DBs_Value" xml:space="preserve">
+    <value>Databases\Value.tsv</value>
+  </data>
+  <data name="SQ_For" xml:space="preserve">
+    <value>for(</value>
+    <comment>for文</comment>
+  </data>
+  <data name="Regux_Conflict" xml:space="preserve">
+    <value>(\(|\[).*?競合</value>
+    <comment>競合ファイル名の探索用正規表現</comment>
+  </data>
+  <data name="DoorLink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plaintext\evtemplate\doorlink.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Extension_SQTemplate" xml:space="preserve">
+    <value>.sqt</value>
+    <comment>イベントテンプレート</comment>
+  </data>
+  <data name="アイコン小" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\アイコン小.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

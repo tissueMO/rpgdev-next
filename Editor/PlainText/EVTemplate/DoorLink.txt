@@ -1,0 +1,20 @@
+﻿//効果音とともにアニメーションする
+Game.DB.FDBMaterial.Play($2, 255, 0, 0);
+Game.SceneMap.MapData.ThisEVData
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.West, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.South, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.North, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.NoHit, TRUE, "")
+	.DoExtraMove(true);
+
+//プレイヤーキャラが一歩前進して入場する
+Game.SceneMap.MapData.Player.MapObject
+	.SetExtraMove(EventMoveTask.NoHit, TRUE, "")
+	.SetExtraMove(EventMoveTask.Forward, 1, "")
+	.SetExtraMove(EventMoveTask.NoHit, FALSE, "")
+	.DoExtraMove(true);
+Game.SceneMap.ChangeMap($3, $4, $5, Direction4.None);

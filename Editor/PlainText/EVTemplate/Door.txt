@@ -1,0 +1,13 @@
+﻿//効果音とともにアニメーションする
+Game.DB.FDBMaterial.Play($2, 255, 0, 0);
+Game.SceneMap.MapData.ThisEVData
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.East, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.North, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.Direction, Direction4.West, "")
+	.SetExtraMove(EventMoveTask.Wait, 50, "")
+	.SetExtraMove(EventMoveTask.NoHit, TRUE, "")
+	.DoExtraMove(true);
+Game.SceneMap.MapData.EVDeleteFromID(Game.SceneMap.MapData.ThisEVData.ID);

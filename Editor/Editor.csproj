@@ -1,0 +1,1107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B29CDF72-A9F0-40B2-B38C-7FE68342752E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Editor</RootNamespace>
+    <AssemblyName>Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\RPG Developer NEXT\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\RPG Developer NEXT\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon_editor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Editor.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'エディターDebug・ゲーム本体Release|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\エディターDebug・ゲーム本体Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azuki">
+      <HintPath>.\Azuki.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CtrlComponent\Common\ctlEditorParent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlEditorParent.Designer.cs">
+      <DependentUpon>ctlEditorParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlListEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlListEditor.Designer.cs">
+      <DependentUpon>ctlListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSelectTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSelectTile.Designer.cs">
+      <DependentUpon>ctlSelectTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSoundEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSoundEditor.Designer.cs">
+      <DependentUpon>ctlSoundEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Effect\EffectDrawObject.cs" />
+    <Compile Include="CtrlComponent\Database\Effect\EffectFrame.cs" />
+    <Compile Include="CtrlComponent\Database\Effect\EffectLayer.cs" />
+    <Compile Include="CtrlComponent\Database\Effect\EffectOneData.cs" />
+    <Compile Include="CtrlComponent\Database\Effect\EffectOrder.cs" />
+    <Compile Include="CtrlComponent\Database\GUIBase\DBGUIManagerBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\GUIBase\DBGUIOneDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\System\DBProperty.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\AutoTileData.cs" />
+    <Compile Include="CtrlComponent\Database\ctlDatabaseEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDatabaseEditor.Designer.cs">
+      <DependentUpon>ctlDatabaseEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBBase.Designer.cs">
+      <DependentUpon>ctlDBBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\GUIBase\ctlDBGUIBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\GUIBase\ctlDBGUIBase.Designer.cs">
+      <DependentUpon>ctlDBGUIBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Effect\ctlDBGUIEffect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Effect\ctlDBGUIEffect.Designer.cs">
+      <DependentUpon>ctlDBGUIEffect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Tileset\ctlDBGUITileset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Tileset\ctlDBGUITileset.Designer.cs">
+      <DependentUpon>ctlDBGUITileset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Unit\ctlDBGUIUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Unit\ctlDBGUIUnit.Designer.cs">
+      <DependentUpon>ctlDBGUIUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\UserDB\ctlDBGUIUserDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\UserDB\ctlDBGUIUserDB.Designer.cs">
+      <DependentUpon>ctlDBGUIUserDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\Unit\EnemyDataInUnit.cs" />
+    <Compile Include="CtrlComponent\Database\Effect\mgrDBEffect.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\mgrDBTileset.cs" />
+    <Compile Include="CtrlComponent\Database\Unit\mgrDBUnit.cs" />
+    <Compile Include="CtrlComponent\Database\UserDB\mgrDBUserDB.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\ObjTileData.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\TileData.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\TileGraphicsData.cs" />
+    <Compile Include="CtrlComponent\Database\Tileset\TilesetOneData.cs" />
+    <Compile Include="CtrlComponent\Database\Unit\UnitOneData.cs" />
+    <Compile Include="CtrlComponent\Database\UserDB\UserDBOneData.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\drwMapObjectForExport.cs" />
+    <Compile Include="CtrlComponent\Map\ctlSQChangeMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlSQChangeMap.Designer.cs">
+      <DependentUpon>ctlSQChangeMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlSQMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlSQMessage.Designer.cs">
+      <DependentUpon>ctlSQMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVEasyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVEasyEditor.Designer.cs">
+      <DependentUpon>ctlEVEasyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\Classes\drwMapObject.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\drwTilePallet.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\EventOneData.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\EventOnePage.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\MapOneData.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\TileData.cs" />
+    <Compile Include="CtrlComponent\Schedule\mgrSchedule.cs" />
+    <Compile Include="CtrlComponent\Text\ctlArgment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlArgment.Designer.cs">
+      <DependentUpon>ctlArgment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlTextEditor.Designer.cs">
+      <DependentUpon>ctlTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgInputTextValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgInputTextValue.Designer.cs">
+      <DependentUpon>dlgInputTextValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgManual.Designer.cs">
+      <DependentUpon>dlgManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolConvertTkoolMapTile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolConvertTkoolMapTile.Designer.cs">
+      <DependentUpon>dlgToolConvertTkoolMapTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgInputNumValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgInputNumValue.Designer.cs">
+      <DependentUpon>dlgInputNumValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgOpening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgOpening.Designer.cs">
+      <DependentUpon>dlgOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolConvertTkoolWalkChar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolConvertTkoolWalkChar.Designer.cs">
+      <DependentUpon>dlgToolConvertTkoolWalkChar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolPictureResize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolPictureResize.Designer.cs">
+      <DependentUpon>dlgToolPictureResize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolPictureTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolPictureTrans.Designer.cs">
+      <DependentUpon>dlgToolPictureTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolSoundLoop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgToolSoundLoop.Designer.cs">
+      <DependentUpon>dlgToolSoundLoop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgEditColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgEditColumn.Designer.cs">
+      <DependentUpon>dlgEditColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgEditCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgEditCurve.Designer.cs">
+      <DependentUpon>dlgEditCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgIDValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgIDValues.Designer.cs">
+      <DependentUpon>dlgIDValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgSelectIcon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgSelectIcon.Designer.cs">
+      <DependentUpon>dlgSelectIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgEditLayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgEditLayers.Designer.cs">
+      <DependentUpon>dlgEditLayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameComplete.Designer.cs">
+      <DependentUpon>dlgFrameComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgUserCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgUserCommands.Designer.cs">
+      <DependentUpon>dlgUserCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapGenerator.Designer.cs">
+      <DependentUpon>dlgMapGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgSelectMapTilePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgSelectMapTilePosition.Designer.cs">
+      <DependentUpon>dlgSelectMapTilePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Schedule\dlgEditSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Schedule\dlgEditSection.Designer.cs">
+      <DependentUpon>dlgEditSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Schedule\dlgEditTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Schedule\dlgEditTask.Designer.cs">
+      <DependentUpon>dlgEditTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdMoveTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdMoveTask.Designer.cs">
+      <DependentUpon>dlgEVcmdMoveTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CommonConstants.cs" />
+    <Compile Include="Module\IDirtyable.cs" />
+    <Compile Include="Module\ListViewItemStringComparer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotes\DungeonGenerator.cs" />
+    <Compile Include="Quotes\DxDLL.cs" />
+    <Compile Include="Module\GuruGuruSMF4.cs" />
+    <Compile Include="MainWnd\PMInstance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgSelectInList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgSelectInList.Designer.cs">
+      <DependentUpon>dlgSelectInList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\dlgLocalSearchReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\dlgLocalSearchReplace.Designer.cs">
+      <DependentUpon>dlgLocalSearchReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdMessage.Designer.cs">
+      <DependentUpon>dlgEVcmdMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgInsertDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgInsertDB.Designer.cs">
+      <DependentUpon>dlgInsertDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgInsertCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgInsertCommand.Designer.cs">
+      <DependentUpon>dlgInsertCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdChangeMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Text\Script\dlgEVcmdChangeMap.Designer.cs">
+      <DependentUpon>dlgEVcmdChangeMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgAddOn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgAddOn.Designer.cs">
+      <DependentUpon>dlgAddOn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameCopy.Designer.cs">
+      <DependentUpon>dlgFrameCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameFill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgFrameFill.Designer.cs">
+      <DependentUpon>dlgFrameFill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\Effect\dlgOrder.Designer.cs">
+      <DependentUpon>dlgOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgEVSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgEVSettings.Designer.cs">
+      <DependentUpon>dlgEVSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapSettings.Designer.cs">
+      <DependentUpon>dlgMapSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgEVTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgEVTemplates.Designer.cs">
+      <DependentUpon>dlgEVTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgEditSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgEditSettings.Designer.cs">
+      <DependentUpon>dlgEditSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgBattleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Database\dlgBattleTest.Designer.cs">
+      <DependentUpon>dlgBattleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgFileSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgFileSelect.Designer.cs">
+      <DependentUpon>dlgFileSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Map\dlgMapTest.Designer.cs">
+      <DependentUpon>dlgMapTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgNewProject.Designer.cs">
+      <DependentUpon>dlgNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgPublish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgPublish.Designer.cs">
+      <DependentUpon>dlgPublish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgShift.Designer.cs">
+      <DependentUpon>dlgShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Common\dlgVersion.Designer.cs">
+      <DependentUpon>dlgVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWnd\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWnd\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\AppSettings.cs" />
+    <Compile Include="Module\Database.cs" />
+    <Compile Include="Module\DBColumn.cs" />
+    <Compile Include="Module\DBLiteral.cs" />
+    <Compile Include="Module\Map.cs" />
+    <Compile Include="CtrlComponent\Map\Classes\mgrMapObject.cs" />
+    <Compile Include="Module\Media.cs" />
+    <Compile Include="Module\Common.cs" />
+    <Compile Include="Module\EditorComponents.cs" />
+    <Compile Include="Module\ProjectManager.cs" />
+    <Compile Include="CtrlComponent\Schedule\ctlScheduleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Schedule\ctlScheduleEditor.Designer.cs">
+      <DependentUpon>ctlScheduleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlCommandTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlCommandTree.Designer.cs">
+      <DependentUpon>ctlCommandTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlOneTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Text\ctlOneTextEditor.Designer.cs">
+      <DependentUpon>ctlOneTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBGeneral.Designer.cs">
+      <DependentUpon>ctlDBGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBMaterial.Designer.cs">
+      <DependentUpon>ctlDBMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBElementDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBElementDB.Designer.cs">
+      <DependentUpon>ctlDBElementDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\System\ctlDBSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\System\ctlDBSystem.Designer.cs">
+      <DependentUpon>ctlDBSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBValues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Database\ctlDBValues.Designer.cs">
+      <DependentUpon>ctlDBValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVPage.Designer.cs">
+      <DependentUpon>ctlEVPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVGraphics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlEVGraphics.Designer.cs">
+      <DependentUpon>ctlEVGraphics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlMapEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlMapEditor.Designer.cs">
+      <DependentUpon>ctlMapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlMapViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlMapViewer.Designer.cs">
+      <DependentUpon>ctlMapViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlTilePallet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Map\ctlTilePallet.Designer.cs">
+      <DependentUpon>ctlTilePallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlFileTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlFileTree.Designer.cs">
+      <DependentUpon>ctlFileTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSoundPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlSoundPlayer.Designer.cs">
+      <DependentUpon>ctlSoundPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlOKCancel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlOKCancel.Designer.cs">
+      <DependentUpon>ctlOKCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlOKCancelApply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlOKCancelApply.Designer.cs">
+      <DependentUpon>ctlOKCancelApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlPathSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlPathSetter.Designer.cs">
+      <DependentUpon>ctlPathSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlComponent\Common\ctlPosition.Designer.cs">
+      <DependentUpon>ctlPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SQ.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotes\ListViewItemComparer.cs" />
+    <EmbeddedResource Include="CtrlComponent\Common\ctlEditorParent.resx">
+      <DependentUpon>ctlEditorParent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlListEditor.resx">
+      <DependentUpon>ctlListEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlSelectTile.resx">
+      <DependentUpon>ctlSelectTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlSoundEditor.resx">
+      <DependentUpon>ctlSoundEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDatabaseEditor.resx">
+      <DependentUpon>ctlDatabaseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDBBase.resx">
+      <DependentUpon>ctlDBBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDBGeneral.resx">
+      <DependentUpon>ctlDBGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\GUIBase\ctlDBGUIBase.resx">
+      <DependentUpon>ctlDBGUIBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\Effect\ctlDBGUIEffect.resx">
+      <DependentUpon>ctlDBGUIEffect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\Tileset\ctlDBGUITileset.resx">
+      <DependentUpon>ctlDBGUITileset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\Unit\ctlDBGUIUnit.resx">
+      <DependentUpon>ctlDBGUIUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\UserDB\ctlDBGUIUserDB.resx">
+      <DependentUpon>ctlDBGUIUserDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlSQChangeMap.resx">
+      <DependentUpon>ctlSQChangeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlSQMessage.resx">
+      <DependentUpon>ctlSQMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlEVEasyEditor.resx">
+      <DependentUpon>ctlEVEasyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Text\ctlArgment.resx">
+      <DependentUpon>ctlArgment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Text\ctlTextEditor.resx">
+      <DependentUpon>ctlTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgInputTextValue.resx">
+      <DependentUpon>dlgInputTextValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgManual.resx">
+      <DependentUpon>dlgManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgToolConvertTkoolMapTile.resx">
+      <DependentUpon>dlgToolConvertTkoolMapTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgEditSettings.resx">
+      <DependentUpon>dlgEditSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgFileSelect.resx">
+      <DependentUpon>dlgFileSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgInputNumValue.resx">
+      <DependentUpon>dlgInputNumValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgNewProject.resx">
+      <DependentUpon>dlgNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgOpening.resx">
+      <DependentUpon>dlgOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgPublish.resx">
+      <DependentUpon>dlgPublish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgShift.resx">
+      <DependentUpon>dlgShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgToolConvertTkoolWalkChar.resx">
+      <DependentUpon>dlgToolConvertTkoolWalkChar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgToolPictureResize.resx">
+      <DependentUpon>dlgToolPictureResize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgToolPictureTrans.resx">
+      <DependentUpon>dlgToolPictureTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgToolSoundLoop.resx">
+      <DependentUpon>dlgToolSoundLoop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgVersion.resx">
+      <DependentUpon>dlgVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgAddOn.resx">
+      <DependentUpon>dlgAddOn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgBattleTest.resx">
+      <DependentUpon>dlgBattleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgEditColumn.resx">
+      <DependentUpon>dlgEditColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgEditCurve.resx">
+      <DependentUpon>dlgEditCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgIDValues.resx">
+      <DependentUpon>dlgIDValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\dlgSelectIcon.resx">
+      <DependentUpon>dlgSelectIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgEditLayers.resx">
+      <DependentUpon>dlgEditLayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgFrameComplete.resx">
+      <DependentUpon>dlgFrameComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgFrameCopy.resx">
+      <DependentUpon>dlgFrameCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgFrameFill.resx">
+      <DependentUpon>dlgFrameFill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgOrder.resx">
+      <DependentUpon>dlgOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Common\dlgSelectInList.resx">
+      <DependentUpon>dlgSelectInList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Database\Effect\dlgUserCommands.resx">
+      <DependentUpon>dlgUserCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgEVSettings.resx">
+      <DependentUpon>dlgEVSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgMapGenerator.resx">
+      <DependentUpon>dlgMapGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgMapSettings.resx">
+      <DependentUpon>dlgMapSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgMapTest.resx">
+      <DependentUpon>dlgMapTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgEVTemplates.resx">
+      <DependentUpon>dlgEVTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Map\dlgSelectMapTilePosition.resx">
+      <DependentUpon>dlgSelectMapTilePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Schedule\dlgEditSection.resx">
+      <DependentUpon>dlgEditSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Schedule\dlgEditTask.resx">
+      <DependentUpon>dlgEditTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\dlgLocalSearchReplace.resx">
+      <DependentUpon>dlgLocalSearchReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\Script\dlgEVcmdMessage.resx">
+      <DependentUpon>dlgEVcmdMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\Script\dlgEVcmdMoveTask.resx">
+      <DependentUpon>dlgEVcmdMoveTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\Script\dlgInsertDB.resx">
+      <DependentUpon>dlgInsertDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\Script\dlgInsertCommand.resx">
+      <DependentUpon>dlgInsertCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Text\Script\dlgEVcmdChangeMap.resx">
+      <DependentUpon>dlgEVcmdChangeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWnd\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Schedule\ctlScheduleEditor.resx">
+      <DependentUpon>ctlScheduleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Text\ctlCommandTree.resx">
+      <DependentUpon>ctlCommandTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Text\ctlOneTextEditor.resx">
+      <DependentUpon>ctlOneTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDBMaterial.resx">
+      <DependentUpon>ctlDBMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDBElementDB.resx">
+      <DependentUpon>ctlDBElementDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\System\ctlDBSystem.resx">
+      <DependentUpon>ctlDBSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Database\ctlDBValues.resx">
+      <DependentUpon>ctlDBValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlEVPage.resx">
+      <DependentUpon>ctlEVPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlEVGraphics.resx">
+      <DependentUpon>ctlEVGraphics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlMapEditor.resx">
+      <DependentUpon>ctlMapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlMapViewer.resx">
+      <DependentUpon>ctlMapViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Map\ctlTilePallet.resx">
+      <DependentUpon>ctlTilePallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlFileTree.resx">
+      <DependentUpon>ctlFileTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlSoundPlayer.resx">
+      <DependentUpon>ctlSoundPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlOKCancel.resx">
+      <DependentUpon>ctlOKCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlOKCancelApply.resx">
+      <DependentUpon>ctlOKCancelApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlPathSetter.resx">
+      <DependentUpon>ctlPathSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlComponent\Common\ctlPosition.resx">
+      <DependentUpon>ctlPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="DxLib_x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\game.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\guide.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\img\frame.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\img\mgrtree.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\intro-license.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\version-getter.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\qa.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\sq-syntax.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor-database.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor-map.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor-menu.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor-schedule.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\editor-text.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\game-knowledge.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\introduction.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\preset.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\releasenote.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\css\reset.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\img\autotile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\img\system.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\img\walkchar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\manual-tree.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\auto-document.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\script.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\js\auto-tree.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\sq.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manual\_template.html" />
+    <Content Include="PlainText\autorun.inf" />
+    <None Include="PresetData\Databases\%24Effects\%24Top.nut" />
+    <None Include="PresetData\Databases\%24Effects\741465677.nut" />
+    <None Include="PresetData\Databases\%24Tilesets\1988940983.tile" />
+    <None Include="PresetData\Databases\%24UserDatabases\1057641178.tsv" />
+    <None Include="PresetData\Databases\%24UserDatabases\1237236378.tsv" />
+    <None Include="PresetData\Databases\%24UserDatabases\746600861.tsv" />
+    <None Include="PresetData\Databases\Char.tsv" />
+    <None Include="PresetData\Databases\Class.tsv" />
+    <None Include="PresetData\Databases\Effect.tsv" />
+    <None Include="PresetData\Databases\Element.tsv" />
+    <None Include="PresetData\Databases\Enemy.tsv" />
+    <None Include="PresetData\Databases\Init.tsv" />
+    <None Include="PresetData\Databases\Item.tsv" />
+    <None Include="PresetData\Databases\Material.tsv" />
+    <None Include="PresetData\Databases\Skill.tsv" />
+    <None Include="PresetData\Databases\State.tsv" />
+    <None Include="PresetData\Databases\Tileset.tsv" />
+    <None Include="PresetData\Databases\Unit.tsv" />
+    <None Include="PresetData\Databases\UserDB.tsv" />
+    <None Include="PresetData\Databases\Value.tsv" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\!SceneMainMap_var.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\!SceneMainTitle_var.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\!SceneSubShop_var.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24Constants.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBChar.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBClass.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBEnemy.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBItem.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBSkill.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBState.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24DBUnit.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24EventHandler.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24Functions.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24MTFunctions.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24SceneMainMap.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24SceneMainTitle.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24SceneSubBattle.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24SceneSubMenu.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\%24SceneSubShop.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\EVMoveExtend.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneMainTitle_TCP.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneMainTitle_UDP.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\!var.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\Classes.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\Common.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\Draw.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\Expression.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\MainRoutine.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\PhaseAction.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\PhaseCommand.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubBattle\PhaseEnding.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\!var.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\Common.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuEquip.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuItem.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuMember.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuOption.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuSave.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuSkill.nut" />
+    <None Include="PresetData\Texts\%24Scripts\%24System\SceneSubMenu\MenuStatus.nut" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DxLib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GuruGuruSMF4.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlainText\EVTemplate\Door.txt" />
+    <Content Include="PlainText\EVTemplate\DoorLink.txt" />
+    <Content Include="PlainText\EVTemplate\DoorLinkWithKey.txt" />
+    <Content Include="PlainText\EVTemplate\DoorWithKey.txt" />
+    <Content Include="PlainText\EVTemplate\Link.txt" />
+    <Content Include="PlainText\EVTemplate\Person.txt" />
+    <Content Include="PlainText\EVTemplate\Shop.txt" />
+    <Content Include="PlainText\EVTemplate\Treasure.txt" />
+    <Content Include="PlainText\EVTemplate\Treasure2ndPage.txt" />
+    <Content Include="PlainText\EVTemplate\TreasureWithKey.txt" />
+    <Content Include="PlainText\License.txt" />
+    <Content Include="PlainText\ProjectFolderDefault.txt" />
+    <Content Include="PlainText\SQCodeTree.txt" />
+    <Content Include="PlainText\SquirrelKeywords.txt" />
+    <None Include="Resources\アイコン大.png" />
+    <None Include="Resources\icon_editor.ico" />
+    <None Include="Resources\icon_gameprogram.ico" />
+    <None Include="Resources\アイコン小.png" />
+    <Content Include="PresetData\Databases\System.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenerateGlueCode\GenerateGlueCode.csproj">
+      <Project>{cb38c9d6-f31e-4f58-bb2c-352b2f4a86b2}</Project>
+      <Name>GenerateGlueCode</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rmdir "$(TargetDir)\PresetData" /S /Q
+echo D | xcopy "$(ProjectDir)\PresetData" "$(TargetDir)\PresetData" /E /D /Y /Q
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

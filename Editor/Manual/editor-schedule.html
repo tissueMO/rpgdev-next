@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RPG Developer NEXT 取扱説明書</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auto-document.js"></script>
+<script src="js/version-getter.js"></script>
+</head>
+
+<body class="node_editor-schedule">
+<!-- タイトルバー -->
+<div id="header">
+  <a href="index.html"><h1><span>RPG Developer NEXT</span> <script>PrintVersion();</script> 取扱説明書</h1></a>
+</div>
+
+<div id="container">
+<!-- 目次サイドバー -->
+<div id="menuContainer">
+  <div id="menuContent">
+    <script src="js/manual-tree.js"></script>
+    <script src="js/auto-tree.js"></script>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="mainContainer">
+  <!-- ぱんくずリスト [&gt]=[>] -->
+  <div id="breadcrumb"><a href="index.html">HOME</a> &gt; <a href="editor.html">エディター部</a> &gt; スケジュール</div>
+
+  <!-- 親ノード見出し -->
+  <h2>スケジュール</h2>
+  <div class="text">
+    <!-- 親ノードのテキスト -->
+    <p>
+      プロジェクトの管理を支援する機能です。<br>
+      特にチーム規模でゲームを製作し始める前には、予めスケジュールを組んでおくことを強くお勧めいたします。<br>
+      本ソフトのスケジュール管理機能では、タスクが遅延しても柔軟にスケジュールを組み直せるようになっています。<br>
+    </p>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="1">ビューア</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      設定されているスケジュールを視覚的に確認できます。<br>
+      縦軸はセクション部（部門と担当者）、横軸はカレンダー部です。当日の日付はハイライトされます。<br>
+      マイルストーンは全部門にまたがるような打ち合わせや、一種の指標として設けると良いかもしれません。<br>
+    </p>
+    <p>
+      なお、一人の担当者に同日複数のタスクが重なっていると正しく表示されません。<br>
+      また、2年以上の長期プロジェクトになるようなタスクを作成することはできません。<br>
+      これは、ビューアの描画上の都合によるためです。<br>
+    </p>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="2">エディター</h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+      こちらのタブでスケジュールを編集できます。<br>
+      「描画イメージを保存」はビューアに表示されるスケジュール表を画像として保存できます。<br>
+      「セクションの編集」で部門や担当者を編集できます。<br>
+    </p>
+    <p>
+      「タスクの追加」から新しいタスクを追加できます。<br>
+      あるタスクを始めるのに前提となるタスクがある（例：シナリオ→マップ等）場合は、「依存先」を設定します。<br>
+      依存先を設定すると、そのタスクが遅延したとき、それに合わせて開始日を自動で修正されるようになります。<br>
+      ただし、マイルストーンは依存先を設定することができないようになっています。<br>
+    </p>
+    <p>
+      タスクをダブルクリックすると、そのタスクの内容を変更したり進捗状況を更新したりできます。<br>
+      タスクが遅延したときは、この画面を通して期間を延長するか、日付を変更することになります。<br>
+    </p>
+  </div>
+  <hr>
+
+</div><!-- /#mainContainer -->
+</div><!-- /#container -->
+</body>
+</html>

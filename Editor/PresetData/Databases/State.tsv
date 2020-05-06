@@ -1,0 +1,12 @@
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnPictureIcon	DBColumnListUser	DBColumnListUser	DBColumnTextOneNumber	DBColumnTextOneNumber	DBColumnBool	DBColumnBool	DBColumnListDB	DBColumnTextIDValues	DBColumnButtonInputIDValues	DBColumnText	DBColumnButtonInputAddon	DBColumnText	DBColumnButtonToScript
+FixedID	ID	名前	アイコン	制約	解除条件	解除条件値	解除確率	移動中も有効	異常	上位互換	個別変数		アドオン		注釈	SQ
+247930255	101	睡眠	4:15	2	1	0	70	0	1	-1					一定時間行動できなくなる	
+1013938520	201	毒	2:15	0	3	300	100	1	1	1112321442					毎ターンダメージを受ける	
+1112321442	202	猛毒	2:15	0	0	0	100	1	1	-1					毒よりもダメージが強い	
+1611495098	211	混乱	13:15	0	1	0	50	0	1	-1	823771206;1				コマンド通りの行動をしなくなる	
+380324798	212	盲目	8:15	0	2	5	100	0	1	-1			0;1027746009;-50		命中率が落ちる	
+1291799624	221	沈黙	5:15	0	2	5	100	0	1	-1			8;43499763;0		魔法が使えなくなる	
+1278877658	411	パワーアップ	2:22	0	0	0	100	0	0	-1			1;1223389434;50|1;594456643;50		物理攻撃力、魔法攻撃力がアップする	
+1775141608	412	ディフェンスアップ	3:22	0	0	0	100	0	0	-1			1;1184635637;50|1;161286853;50		物理守備力、魔法守備力がアップする	
+1565323324	413	スピードアップ	6:22	0	0	0	100	0	0	-1			1;948231691;50		敏捷性がアップする	
+

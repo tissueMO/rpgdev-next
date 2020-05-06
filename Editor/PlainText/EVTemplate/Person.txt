@@ -1,0 +1,2 @@
+﻿Game.SceneMap.MapData.ThisEVData.SetDirection4ToPlayer();
+Game.SceneMap.ShowMessage($1, $2, $3);

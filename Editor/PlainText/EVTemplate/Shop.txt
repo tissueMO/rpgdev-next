@@ -1,0 +1,9 @@
+﻿Game.SceneMap.ShowMessage($1, $2, $3);
+
+//商品を登録する
+Game.SceneMap.ShopData.Clear();
+//ADDITEMS
+//ショップ画面を呼び出す
+Game.StartSubScene(Scene.Shop, true, true);
+
+Game.SceneMap.ShowMessage($1, $2, $4);

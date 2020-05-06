@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RPG Developer NEXT 取扱説明書</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auto-document.js"></script>
+<script src="js/version-getter.js"></script>
+</head>
+
+<!-- 以下のクラスは manual-tree.js で定義したノードのものと一致させる -->
+<body class="node_">
+<!-- タイトルバー -->
+<div id="header">
+  <a href="index.html"><h1><span>RPG Developer NEXT</span> <script>PrintVersion();</script> 取扱説明書</h1></a>
+</div>
+
+<div id="container">
+<!-- 目次サイドバー -->
+<div id="menuContainer">
+  <div id="menuContent">
+    <script src="js/manual-tree.js"></script>
+    <script src="js/auto-tree.js"></script>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="mainContainer">
+  <!-- ぱんくずリスト [&gt]=[>] -->
+  <div id="breadcrumb"><a href="index.html">HOME</a> &gt; </div>
+
+  <!-- 親ノード見出し -->
+  <h2></h2>
+  <div class="text">
+    <!-- 親ノードのテキスト -->
+    <p>
+    </p>
+  </div>
+  <hr>
+
+  <!-- 子ノード見出し -->
+  <h3 id="1"></h3>
+  <div class="text">
+    <!-- 子ノードのテキスト -->
+    <p>
+    </p>
+  </div>
+</div><!-- /#mainContainer -->
+</div><!-- /#container -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+5
+Editor.Module.DB.DBColumnTextOneNumber|ID|180|9999|0|0
+Editor.Module.DB.DBColumnText|ファイル名|180|False|
+Editor.Module.DB.DBColumnButtonSelectFile|1||
+Editor.Module.DB.DBColumnText|名前|180|False|
+Editor.Module.DB.DBColumnText|セリフ|180|False|
+DBColumnTextOneNumber	DBColumnText	DBColumnButtonSelectFile	DBColumnText	DBColumnText
+ID	ファイル名		名前	セリフ
+

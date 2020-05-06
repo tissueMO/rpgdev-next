@@ -1,0 +1,15 @@
+6
+Editor.Module.DB.DBColumnText|マップファイル名|180|False|
+Editor.Module.DB.DBColumnButtonSelectFile|0||
+Editor.Module.DB.DBColumnText|表示名|180|False|
+Editor.Module.DB.DBColumnTextOneNumber|X|180|9999|0|0
+Editor.Module.DB.DBColumnTextOneNumber|Y|180|9999|0|0
+Editor.Module.DB.DBColumnBool|訪問済|180|False
+DBColumnText	DBColumnButtonSelectFile	DBColumnText	DBColumnTextOneNumber	DBColumnTextOneNumber	DBColumnBool
+マップファイル名		表示名	X	Y	訪問済
+Maps\01 レオナルドの里\村外観.map		レオナルドの里	18	16	1
+Maps\02 森\森.map		森トロッコ前	34	28	0
+Maps\03 ダンジョン\ダンジョン入口.map		ダンジョントロッコ前	8	4	0
+Maps\03 ダンジョン\ダンジョン2.map		ダンジョンお絵かき甲冑前	15	6	0
+Maps\03 ダンジョン\異空間.map		ダークレオナルド前	15	18	0
+

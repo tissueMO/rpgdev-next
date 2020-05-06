@@ -1,0 +1,18 @@
+﻿//鍵の所持確認
+if(Game.DB.VDBParty.CheckItemInParty($1)) {
+	//効果音とともにアニメーションする
+	Game.DB.FDBMaterial.Play($2, 255, 0, 0);
+	Game.SceneMap.MapData.ThisEVData
+		.SetExtraMove(EventMoveTask.Wait, 100, "")
+		.SetExtraMove(EventMoveTask.Direction, Direction4.East, "")
+		.SetExtraMove(EventMoveTask.Wait, 100, "")
+		.SetExtraMove(EventMoveTask.Direction, Direction4.North, "")
+		.SetExtraMove(EventMoveTask.Wait, 100, "")
+		.SetExtraMove(EventMoveTask.Direction, Direction4.West, "")
+		.SetExtraMove(EventMoveTask.Wait, 100, "")
+		.DoExtraMove(true);
+	Game.SceneMap.MapData.EVDeleteFromID(Game.SceneMap.MapData.ThisEVData.ID);
+} else {
+	//鍵を持っていない場合
+	Game.SceneMap.ShowMessage(-1, "", "鍵がかかっていて開かない。");
+}

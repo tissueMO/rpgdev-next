@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CDatabase.cpp" />
+    <ClCompile Include="CDBActorData.cpp" />
+    <ClCompile Include="CDBActor_IOStatic.cpp" />
+    <ClCompile Include="CDBBase.cpp" />
+    <ClCompile Include="CDBBaseOne.cpp" />
+    <ClCompile Include="CDBCell.cpp" />
+    <ClCompile Include="CDBActor.cpp" />
+    <ClCompile Include="CDBEffect.cpp" />
+    <ClCompile Include="CDBMaterial.cpp" />
+    <ClCompile Include="CDBParty.cpp" />
+    <ClCompile Include="CDBSystem.cpp" />
+    <ClCompile Include="CDBTileset.cpp" />
+    <ClCompile Include="CDBUser.cpp" />
+    <ClCompile Include="CDBValue.cpp" />
+    <ClCompile Include="CDXLibWrapper.cpp" />
+    <ClCompile Include="CGameObject.cpp" />
+    <ClCompile Include="CFPS.cpp" />
+    <ClCompile Include="CharCode.cpp" />
+    <ClCompile Include="CharCodeTable.cpp" />
+    <ClCompile Include="CMapData_Map.cpp" />
+    <ClCompile Include="CMapData_Draw.cpp" />
+    <ClCompile Include="CMapData_EVListWrapper.cpp" />
+    <ClCompile Include="CMapEventData.cpp" />
+    <ClCompile Include="CMaterialFont.cpp" />
+    <ClCompile Include="CMaterialGraphics.cpp" />
+    <ClCompile Include="CMultiThread.cpp" />
+    <ClCompile Include="CRegularFunc.cpp" />
+    <ClCompile Include="CSaveLoad.cpp" />
+    <ClCompile Include="CMaterialSound.cpp" />
+    <ClCompile Include="CSceneBase.cpp" />
+    <ClCompile Include="CSceneMap.cpp" />
+    <ClCompile Include="CSceneTitle.cpp" />
+    <ClCompile Include="CScript.cpp" />
+    <ClCompile Include="CShopData.cpp" />
+    <ClCompile Include="CSprite.cpp" />
+    <ClCompile Include="CDebug.cpp" />
+    <ClCompile Include="DXArchive.cpp" />
+    <ClCompile Include="DXArchiveVer5.cpp" />
+    <ClCompile Include="FileLib.cpp" />
+    <ClCompile Include="General.cpp" />
+    <ClCompile Include="CScriptDebugger.cpp" />
+    <ClCompile Include="GuruGuruSMF4_Cpp_Static.cpp" />
+    <ClCompile Include="Huffman.cpp" />
+    <ClCompile Include="SQGlue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDXLibWrapper.h" />
+    <ClInclude Include="CGameObject.h" />
+    <ClInclude Include="CharCode.h" />
+    <ClInclude Include="ClassMaterials.h" />
+    <ClInclude Include="ClassSub.h" />
+    <ClInclude Include="ColorDefines.h" />
+    <ClInclude Include="CommonConstants.h" />
+    <ClInclude Include="ConstantIntegers.h" />
+    <ClInclude Include="ConstantKeys.example.h" />
+    <ClInclude Include="ConstantKeys.h" />
+    <ClInclude Include="ConstantStrings.h" />
+    <ClInclude Include="CSaveLoad.h" />
+    <ClInclude Include="CScript.h" />
+    <ClInclude Include="CSprite.h" />
+    <ClInclude Include="ClassDatabases.h" />
+    <ClInclude Include="CDebug.h" />
+    <ClInclude Include="DataType.h" />
+    <ClInclude Include="DXArchive.h" />
+    <ClInclude Include="DXArchiveVer5.h" />
+    <ClInclude Include="FileLib.h" />
+    <ClInclude Include="General.h" />
+    <ClInclude Include="GuruGuruSMF4_Cpp.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Huffman.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ClassScenes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09AD65E1-10A6-4342-AF95-3EDB05B66B58}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)</OutDir>
+    <IntDir>$(Configuration) - $(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)lib\DxLibNoneModel_VC;$(SolutionDir)lib\Sqrat with Squirrel224S\include;$(SolutionDir)lib\Sqrat with Squirrel224S\SQUIRREL224\include;$(SolutionDir)lib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)lib\DxLibNoneModel_VC;$(SolutionDir)lib\GuruGuruSMF;$(SolutionDir)lib\cryptopp;$(SolutionDir)lib\zlib\staticlibrary;$(SolutionDir)lib\Sqrat with Squirrel224S\SQUIRREL224\lib;$(LibraryPath)</LibraryPath>
+    <CodeAnalysisRuleSet>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)</OutDir>
+    <IntDir>$(Configuration) - $(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)lib\DxLibNoneModel_VC;$(SolutionDir)lib\Sqrat with Squirrel224S\include;$(SolutionDir)lib\Sqrat with Squirrel224S\SQUIRREL224\include;$(SolutionDir)lib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)lib\DxLibNoneModel_VC;$(SolutionDir)lib\GuruGuruSMF;$(SolutionDir)lib\cryptopp;$(SolutionDir)lib\zlib\staticlibrary;$(SolutionDir)lib\Sqrat with Squirrel224S\SQUIRREL224\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GAMELIB;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <EnablePREfast>false</EnablePREfast>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <DisableSpecificWarnings>26426;26400;26401;26409;26440;26432;26814;26455;6244;6246;4457;4458;4459;26492;26482;26481</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>GAMELIB;WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>26426;26400;26401;26409;26440;26432;26814;26455;6244;6246;4457;4458;4459;26492;26482;26481</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

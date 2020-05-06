@@ -1,0 +1,65 @@
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnBool	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1715923966	1	武器防具屋に入店した	0	
+1854632159	2	宿屋に入店した	0	
+1630293573	3	初めて森に入った	0	
+956939128	4	初めてダンジョンに入った	0	
+1110905879	9001	$セーブ禁止	0	有効であるときはセーブができなくなります。
+1222958890	9002	$所持金表示	0	有効であるときは画面右上に所持金ウィンドウが表示されます。
+1358433584	9003	$マップ移動時にフェードアウトしない	0	イベント中など、既にフェードアウトした状態からマップ移動をする等の用途で、有効にします。
+24400435	9004	$マップ移動後にフェードインしない	0	イベント中など、暗転状態のままイベントを開始する等の用途で、有効にします。
+358059746	9901	$デバッグ用ガイド表示	1	有効であるときはデバッグ用のコマンドガイドを画面上に表示します。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1715923966	1	シナリオ進行度	0	シナリオの進行度を示します。
+2084302691	9001	$会話メッセージ表示速度	1	マイナスにするとメッセージそのものがデバッグ出力になります。0で瞬間表示になり、数値が大きいほど遅くなります。
+315411244	9005	$戦闘メッセージ表示速度	1	戦闘時におけるメッセージ送りの速度です。数値が大きいほど遅くなります。
+248120655	9011	$前回までのプレイ時間	0	セーブ時点でのプレイ時間(秒数)です。
+1874437940	9012	$起動時の時刻秒	0	ゲーム本編開始時点の時刻(秒数)です。
+1734005777	9101	$主人公ジャンプカウンター	0	プレイヤーのジャンプアクションに使われます。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnText	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1246572451	9001	$通貨名称	Ｇ	
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+2074873192	0	HP	0	0になると死亡します。
+1185025769	1	MP	0	スキルを使うのに必要なポイントです。
+1027746009	9	$成功率	100	100以上のとき必ず成功します。
+1918801508	1001	$ナンバリング完了	0	【内部】エネミーでのみ使われます。
+2077402164	1002	$防御中かどうか	0	【内部】フラグ値として扱います。
+861687863	1003	$敏捷性の分散値	0	【内部】分散量を一時的に保存します。
+1418126984	1004	$逃走したかどうか	0	【内部】エネミーでのみ使われます。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1221237944	0	$成功率	100	このアイテム/スキルを使用したときの成功率です。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1169686500	0	$経過ターン数	0	【内部】罹患してから経過したターン数です。
+738415583	1	$経過歩数	0	【内部】罹患してから経過した歩数です。
+823771206	101	$混乱しているかどうか	0	混乱している（選択通りの行動を行わない）とき、TRUEとします。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+205971910	1	$汎用A	0	ユーザーが自由に使える変数です。
+1920285767	2	$汎用B	0	ユーザーが自由に使える変数です。
+290341079	3	$汎用C	0	ユーザーが自由に使える変数です。
+889846050	4	$汎用D	0	ユーザーが自由に使える変数です。
+419322777	5	$汎用E	0	ユーザーが自由に使える変数です。
+
+FixedID	DBColumnTextOneNumber	DBColumnText	DBColumnTextOneNumber	DBColumnText
+FixedID	ID	名前	既定値	注釈
+1477187528	1	$汎用A	0	ユーザーが自由に使える変数です。
+649858238	2	$汎用B	0	ユーザーが自由に使える変数です。
+1324238288	3	$汎用C	0	ユーザーが自由に使える変数です。
+1129875601	4	$汎用D	0	ユーザーが自由に使える変数です。
+469964068	5	$汎用E	0	ユーザーが自由に使える変数です。
+1554149464	9001	$ジャンプカウンター	0	【内部】イベント拡張移動「ジャンプ」に使われるカウンターです。
+

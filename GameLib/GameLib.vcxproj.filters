@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="1. ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="2. ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="3. リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="2. ソース ファイル\CMaterial">
+      <UniqueIdentifier>{8d95007d-5f8b-4d18-9472-70fb5e5fdbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2. ソース ファイル\ClassScenes">
+      <UniqueIdentifier>{23eb2dd5-5f05-4732-9b0f-b761dbc58fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2. ソース ファイル\ClassDatabases">
+      <UniqueIdentifier>{a77876b0-587a-4c93-9aca-8d9981efec86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2. ソース ファイル\ClassSub">
+      <UniqueIdentifier>{990190de-bbfb-46ad-83ee-3d17da745415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. ヘッダー ファイル\Constants">
+      <UniqueIdentifier>{4d27ecb6-d837-4180-ab7e-bfd16ba367e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. ヘッダー ファイル\GameObject">
+      <UniqueIdentifier>{772ef317-8715-485b-9990-9d76efe3d956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. ヘッダー ファイル\General">
+      <UniqueIdentifier>{bdc34039-d1e5-4960-945e-06f4696aabfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2. ソース ファイル\General">
+      <UniqueIdentifier>{92112b7c-bec1-439c-8c19-53adde89bfe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4. DXアーカイブ">
+      <UniqueIdentifier>{1d40d2fd-f688-4295-860c-411dc8dfba2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4. DXアーカイブ\Headers">
+      <UniqueIdentifier>{9bb89014-ac3b-4ba2-99cf-44ade21bdd8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4. DXアーカイブ\Sources">
+      <UniqueIdentifier>{c6888a1c-ffcd-4d58-95d8-f0658fb300dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CGameObject.cpp">
+      <Filter>2. ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialSound.cpp">
+      <Filter>2. ソース ファイル\CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialGraphics.cpp">
+      <Filter>2. ソース ファイル\CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialFont.cpp">
+      <Filter>2. ソース ファイル\CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="CMultiThread.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneMap.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBBaseOne.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBBase.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDatabase.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBCell.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBSystem.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBMaterial.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBEffect.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBTileset.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBValue.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBParty.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBUser.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneTitle.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CRegularFunc.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="SQGlue.cpp">
+      <Filter>2. ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapEventData.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CDXLibWrapper.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CSaveLoad.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CScript.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CShopData.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="General.cpp">
+      <Filter>2. ソース ファイル\General</Filter>
+    </ClCompile>
+    <ClCompile Include="CDebug.cpp">
+      <Filter>2. ソース ファイル\General</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBActorData.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBActor.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBActor_IOStatic.cpp">
+      <Filter>2. ソース ファイル\ClassDatabases</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapData_Draw.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapData_Map.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CMapData_EVListWrapper.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CFPS.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneBase.cpp">
+      <Filter>2. ソース ファイル\ClassScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CScriptDebugger.cpp">
+      <Filter>2. ソース ファイル\ClassSub</Filter>
+    </ClCompile>
+    <ClCompile Include="GuruGuruSMF4_Cpp_Static.cpp">
+      <Filter>2. ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CharCode.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CharCodeTable.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DXArchive.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DXArchiveVer5.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLib.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Huffman.cpp">
+      <Filter>4. DXアーカイブ\Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>3. リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>1. ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="General.h">
+      <Filter>1. ヘッダー ファイル\General</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonConstants.h">
+      <Filter>1. ヘッダー ファイル\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantIntegers.h">
+      <Filter>1. ヘッダー ファイル\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantStrings.h">
+      <Filter>1. ヘッダー ファイル\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="CDXLibWrapper.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObject.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassDatabases.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassMaterials.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassScenes.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassSub.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CSaveLoad.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CScript.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>1. ヘッダー ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CDebug.h">
+      <Filter>1. ヘッダー ファイル\General</Filter>
+    </ClInclude>
+    <ClInclude Include="GuruGuruSMF4_Cpp.h">
+      <Filter>1. ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorDefines.h">
+      <Filter>1. ヘッダー ファイル\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Huffman.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CharCode.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DataType.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXArchive.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXArchiveVer5.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLib.h">
+      <Filter>4. DXアーカイブ\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantKeys.h">
+      <Filter>1. ヘッダー ファイル\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantKeys.example.h">
+      <Filter>1. ヘッダー ファイル\Constants</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc">
+      <Filter>3. リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
