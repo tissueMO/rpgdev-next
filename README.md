@@ -15,6 +15,15 @@ RPGはゼロベースでの開発を行うとなると膨大な時間と工数�
 エディターは Microsoft .NET Framework 4.7 以降、ゲームプログラムは DirectX 9.0c 以降のインストールが必須です。  
 
 
+## Downloads
+
+[Latest Release](https://github.com/tissueMO/rpgdev-next/releases/latest)
+
+- [RPG Developer NEXT バイナリファイル一式](https://github.com/tissueMO/rpgdev-next/releases/latest/download/RPGDeveloperNEXT.zip)
+
+- [サンプルゲーム「ダークレオナルドの逆襲」](https://github.com/tissueMO/rpgdev-next/releases/latest/download/SampleGame.zip)
+
+
 ## ScreenShots
 
 ### スケジュール管理機能
