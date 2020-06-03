@@ -1,4 +1,4 @@
-# 2D-RPG 統合オーサリングソフト
+# RPG Developer NEXT
 
 ## Summary
 
